@@ -1,0 +1,137 @@
+.my-page .head {
+  background: linear-gradient(to bottom, #FFF1DF, #FFEED8);
+  text-align: center;
+  padding: 80rpx 0;
+}
+.my-page .head .head-img {
+  width: 158rpx;
+  height: 158rpx;
+  border-radius: 58rpx;
+}
+.my-page .head .head-text {
+  font-size: 40rpx;
+}
+.my-page .head .head-text .num {
+  font-size: 32rpx;
+}
+.my-page .head .head-text image {
+  height: 35rpx;
+  width: 35rpx;
+  margin-left: 10rpx;
+}
+.my-page .head .head-text button {
+  background: #FDC67F;
+  color: #ffffff;
+  font-size: 36rpx;
+  margin-top: 50rpx;
+  border-radius: 20rpx;
+}
+.my-page .order-wrap {
+  border-radius: 30rpx 30rpx 0 0;
+  margin-top: -20rpx;
+  background: #ffffff;
+}
+.my-page .order-wrap .order-title {
+  border-bottom: 1rpx solid #F4F5F7;
+  height: 100rpx;
+  line-height: 100rpx;
+  padding: 0 40rpx;
+}
+.my-page .order-wrap .empty {
+  padding: 60rpx 40rpx;
+  text-align: center;
+}
+.my-page .order-wrap .empty image {
+  width: 310rpx;
+  height: 290rpx;
+  display: block;
+  margin: 0 auto;
+}
+.my-page .order-wrap .empty .empty-text {
+  margin-top: 50rpx;
+  font-size: 36rpx;
+  color: #BABABA;
+  display: block;
+}
+.my-page .order-wrap .orders {
+  padding: 60rpx 40rpx 0 60rpx;
+}
+.my-page .order-wrap .orders .order {
+  border-radius: 20rpx;
+  margin-bottom: 40rpx;
+  padding: 20rpx;
+  display: flex;
+  flex-direction: row;
+}
+.my-page .order-wrap .orders .order .img {
+  display: inline-block;
+  position: relative;
+  top: -40rpx;
+  left: -40rpx;
+  border: 1rpx solid #F4F5F7;
+  border-radius: 12px;
+}
+.my-page .order-wrap .orders .order .img image {
+  width: 180rpx;
+  height: 180rpx;
+  border-radius: 10rpx;
+}
+.my-page .order-wrap .orders .order .desc {
+  flex: 1;
+}
+.my-page .order-wrap .orders .order .desc .names {
+  font-size: 24rpx;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10rpx;
+  margin-bottom: 8rpx;
+}
+.my-page .order-wrap .orders .order .desc .names .name {
+  font-size: 32rpx;
+  font-weight: bold;
+}
+.my-page .order-wrap .orders .order .desc .status {
+  font-size: 24rpx;
+  color: #B8BBBC;
+  margin-bottom: 8rpx;
+}
+.my-page .order-wrap .orders .order .desc .prices {
+  font-size: 30rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.my-page .order-wrap .orders .order .desc .prices .orange {
+  color: #F0AF5A;
+}
+.my-page .contacts-wrap {
+  padding: 0 40rpx;
+}
+.my-page .contacts-wrap .contacts {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 94rpx;
+  font-size: 28rpx;
+  border-radius: 20rpx;
+}
+.my-page .contacts-wrap .contacts .contact {
+  flex: 1;
+  text-align: center;
+  height: 94rpx;
+  line-height: 94rpx;
+}
+.my-page .contacts-wrap .contacts .contact image {
+  width: 40rpx;
+  height: 38rpx;
+  margin-right: 8rpx;
+  vertical-align: middle;
+}
+.my-page .contacts-wrap .contacts .bordered {
+  border-left: 1rpx solid #F4F5F7;
+}
+.my-page .logout {
+  color: #B8BBBC;
+  font-size: 28rpx;
+  text-align: center;
+  margin: 20rpx auto;
+}

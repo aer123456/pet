@@ -1,0 +1,84 @@
+<view class="order-detail-page">
+  <view class="wrap">
+    <view class="order box-shadow">
+      <view class="img">
+        <image src="../../assets/image/my/cat.png" />
+      </view>
+      <view class="desc">
+        <view class="names">已退款</view>
+        <view class="status">2020-5-20 20:32:12</view>
+      </view>
+    </view>
+  </view>
+  <view class="title">我的预定</view>
+
+  <view class="order-detail box-shadow">
+    <view class="order-title">
+      <view>
+        <image src="../../assets/image/icon/petDetail/store.png" />
+        <text>悠尼宠物</text>
+      </view>
+      <view class="orange">已交付</view>
+    </view>
+    <view class="gap" />
+    <view class="pics">
+      <image src="../../assets/image/my/cat.png" />
+      <view class="pics-desc">
+        <view class="pic-title">小石头</view>
+        <view class="pic-desc">男宝/已打疫苗/蓝色眼睛/活泼 /已绝育</view>
+        <view class="pic-price">￥2,800</view>
+      </view>
+    </view>
+    <view class="gap" />
+    <view class="texts">
+      <view class="text">
+        <text>订单类型：</text>
+        <text>预定订单</text>
+      </view>
+      <view class="text">
+        <text>订单编号：</text>
+        <text>234134234234</text>
+      </view>
+      <view class="text">
+        <text>下单时间：</text>
+        <text>2020-5-20 20:32:12</text>
+      </view>
+      <view class="text">
+        <text>支付方式：</text>
+        <text>微信支付</text>
+      </view>
+    </view>
+    <view class="gap" />
+    <view class="texts">
+      <view class="text gray">
+        <text>商品价格：</text>
+        <text>￥2,800</text>
+      </view>
+      <view class="text gray">
+        <text>优惠金额</text>
+        <text>￥800</text>
+      </view>
+      <view class="text">
+        <text>实际总额：</text>
+        <text>￥2,000</text>
+      </view>
+      <view class="text">
+        <text>已付定金：</text>
+        <text class="orange">￥2,000</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="contacts-wrap">
+    <view class="contacts box-shadow">
+      <view class="contact">
+        <image src="../../assets/image/icon/other/msg.png" />
+        <text>联系我们</text>
+      </view>
+      <view class="contact bordered">
+        <image src="../../assets/image/icon/other/tel.png" />
+        <text>致电我们</text>
+      </view>
+    </view>
+  </view>
+</view>

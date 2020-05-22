@@ -1,0 +1,55 @@
+<!--账户页-->
+<view class="my-page">
+  <view class="head">
+    <image class="head-img" src='../../assets/image/my/head.png' />
+    <view class="head-text">
+      <view>未登录<image src='../../assets/image/my/sex.png' /></view>
+      <!-- <view class="num">189 **** 9873</view> -->
+      <button>微信登录</button>
+    </view>
+  </view>
+
+  <view class="order-wrap">
+    <view class="order-title">我的预定</view>
+    <!-- <view class="no-login empty">
+      <image src="../../assets/image/my/noLogin.png" />
+      <view class="empty-text">登录后显示</view>
+    </view> -->
+    <!-- <view class="no-order empty">
+      <image src="../../assets/image/my/noOrder.png" />
+      <text class="empty-text">暂无预定</text>
+    </view> -->
+    <view class="orders">
+      <view class="order box-shadow">
+        <view class="img">
+          <image src="../../assets/image/my/head.png" />
+        </view>
+        <view class="desc">
+          <view class="names">
+            <text class="name">小豆包</text>
+            <text>已预订</text>
+          </view>
+          <view class="status">男宝/已打疫苗/蓝色眼睛/活泼/已绝育/纯种</view>
+          <view class="prices">
+            <text>总价：￥2,800</text>
+            <text class="orange">定金：￥800</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="contacts-wrap">
+    <view class="contacts box-shadow">
+      <view class="contact">
+        <image src="../../assets/image/icon/other/msg.png" />
+        <text>联系我们</text>
+      </view>
+      <view class="contact bordered">
+        <image src="../../assets/image/icon/other/tel.png" />
+        <text>致电我们</text>
+      </view>
+    </view>
+  </view>
+  <view class="logout">退出登录</view>
+</view>
