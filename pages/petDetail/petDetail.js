@@ -1,3 +1,10 @@
+/**
+* @file: description
+* @author: huguantao
+* @Date: 2020-05-19 21:03:52
+* @LastEditors: huguantao
+* @LastEditTime: 2020-05-23 23:47:26
+ */
 // pages/petDetail/petDetail.js
 Page({
 
@@ -5,7 +12,39 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    colors: [
+      [
+        {img: '../../assets/image/icon/petDetail/color1.png', desc: '金色'},
+        {img: '../../assets/image/icon/petDetail/color2.png', desc: '银色'},
+        {img: '../../assets/image/icon/petDetail/color3.png', desc: '蓝色'},
+        {img: '../../assets/image/icon/petDetail/color4.png', desc: '红色'},
+        {img: '../../assets/image/icon/petDetail/color5.png', desc: '黑色'},
+        {img: '../../assets/image/icon/petDetail/color6.png', desc: '白色'}
+      ],
+      [
+        {img: '../../assets/image/icon/petDetail/color7.png', desc: '黄色'},
+        {img: '../../assets/image/icon/petDetail/color8.png', desc: '灰色'},
+        {img: '../../assets/image/icon/petDetail/color9.png', desc: '渐层'},
+        {img: '../../assets/image/icon/petDetail/color10.png', desc: '斑纹'},
+        {img: '../../assets/image/icon/petDetail/color11.png', desc: '花纹'},
+        {img: '../../assets/image/icon/petDetail/color12.png', desc: '其他'}
+      ]
+    ],
+    eyes: [
+      {img: '../../assets/image/icon/petDetail/eye1.png', desc: '蓝色'},
+      {img: '../../assets/image/icon/petDetail/eye2.png', desc: '绿色'},
+      {img: '../../assets/image/icon/petDetail/eye3.png', desc: '琥珀色'},
+      {img: '../../assets/image/icon/petDetail/eye4.png', desc: '浅棕色'},
+      {img: '../../assets/image/icon/petDetail/eye5.png', desc: '紫铜色'},
+      {img: '../../assets/image/icon/petDetail/eye6.png', desc: '鸳鸯色'},
+      {img: '../../assets/image/icon/petDetail/eye7.png', desc: '其他'},
+    ],
+    furs: ['短毛', '长毛', '卷毛', '无毛', '其他'],
+    ears: ['立耳', '折耳', '卷耳', '其他'],
+    visible: false,
+    disableInput: true,
+    submitPhone: '',
+    currentTab: 1
   },
 
   /**
@@ -62,5 +101,29 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  switchTab: function(event) {
+    var index = event.currentTarget.dataset.index;
+    this.setData({currentTab: index});
+  },
+
+  showModal: function() {
+    this.setData({visible: true})
+  },
+  closeModal: function() {
+    this.setData({visible: false})
+  },
+  inputPhone: function(event) {
+    this.setData({submitPhone: event.detail.value});
+    var phoneReg = /^[1][3,4,5,7,8][0-9]{9}$/;
+    if (phoneReg.test(event.detail.value)) {
+      this.setData({disableInput: false})
+    } else {
+      this.setData({disableInput: true})
+    }
+  },
+  submit: function() {
+    // TODO: 提交
   }
 })
