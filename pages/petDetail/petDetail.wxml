@@ -1,2 +1,40 @@
-<!--pages/petDetail/petDetail.wxml-->
-<text>pages/petDetail/petDetail.wxml</text>
+<view class="pet-detail-page">
+  <view class="pet-detail-banner">
+
+  </view>
+  <view class="pet-detail-content-wrap">
+    <view class="view1">
+      <view class="title">
+        <text>小豆丁</text>
+        <image src="../../assets/image/my/sex1.png" />
+      </view>
+      <view class="birth">
+        <image src="../../assets/image/icon/petDetail/birth.png" />
+        <text >猫咪生日：2020.5.1</text>
+      </view>
+      <view class="other">洗澡/洗澡容器/盆</view>
+      <view class="marks">
+        <text>商品标签</text>
+        <text>商品标签</text>
+        <text>商品标签</text>
+      </view>
+      <view class="price">
+        <text>￥3,500</text>
+        <text class="discount">￥4,500</text>
+      </view>
+    </view>
+    <view class="activity">
+      距离活动结束：<text class="left">46</text>:<text class="middle">25</text>:<text class="right">33</text>
+    </view>
+    <view class="address">
+      <image src="../../assets/image/icon/petDetail/addr.png" />
+      所属门店仓库：证大大拇指店
+    </view>
+    <view class="tabs">
+      <view class="tab current">喵喵详情</view>
+      <view class="tab">品种分析</view>
+      <view class="tab">购买流程</view>
+      <view class="tab">售后服务</view>
+    </view>
+  </view>
+</view>

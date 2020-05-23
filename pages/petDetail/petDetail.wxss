@@ -1,1 +1,120 @@
-/* pages/petDetail/petDetail.wxss */
+.pet-detail-page .pet-detail-banner {
+  width: 100%;
+  height: 500rpx;
+  background: orange;
+}
+.pet-detail-page .pet-detail-content-wrap {
+  background-color: #fff;
+  border-radius: 40rpx 40rpx 0px 0px;
+  margin-top: -40rpx;
+}
+.pet-detail-page .pet-detail-content-wrap .view1 {
+  padding: 30rpx 60rpx;
+}
+.pet-detail-page .pet-detail-content-wrap .view1 .title {
+  font-size: 46rpx;
+  color: #424242;
+}
+.pet-detail-page .pet-detail-content-wrap .view1 .title image {
+  width: 32rpx;
+  height: 32rpx;
+  vertical-align: middle;
+  margin-left: 14rpx;
+}
+.pet-detail-page .pet-detail-content-wrap .view1 .birth {
+  font-size: 32rpx;
+  color: #424242;
+  margin: 10rpx 0;
+}
+.pet-detail-page .pet-detail-content-wrap .view1 .birth image {
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 14rpx;
+}
+.pet-detail-page .pet-detail-content-wrap .view1 .other {
+  font-size: 30rpx;
+  color: #b8bbbc;
+}
+.pet-detail-page .pet-detail-content-wrap .view1 .marks {
+  margin: 10rpx 0;
+}
+.pet-detail-page .pet-detail-content-wrap .view1 .marks text {
+  display: inline-block;
+  background: #fef2e3;
+  border-radius: 12rpx 12rpx 12rpx 0px;
+  font-size: 28rpx;
+  color: #f0af5a;
+  padding: 5rpx 10rpx;
+  margin-right: 12rpx;
+}
+.pet-detail-page .pet-detail-content-wrap .view1 .price {
+  font-size: 46rpx;
+  color: #f0af5a;
+}
+.pet-detail-page .pet-detail-content-wrap .view1 .price .discount {
+  font-size: 28rpx;
+  color: #b8bbbc;
+  text-decoration: line-through;
+}
+.pet-detail-page .pet-detail-content-wrap .activity {
+  width: 100%;
+  height: 109rpx;
+  line-height: 109rpx;
+  background: #fef2e3;
+  padding-left: 60rpx;
+  color: rgba(240, 175, 90, 0.6);
+  font-size: 30rpx;
+}
+.pet-detail-page .pet-detail-content-wrap .activity text {
+  display: inline-block;
+  color: #fff;
+  background: rgba(253, 198, 127, 0.8);
+  height: 45rpx;
+  line-height: 45rpx;
+  padding: 5rpx 8rpx;
+}
+.pet-detail-page .pet-detail-content-wrap .activity .left {
+  border-radius: 12rpx 0 0 12rpx;
+  margin-left: 24rpx;
+  margin-right: 3rpx;
+}
+.pet-detail-page .pet-detail-content-wrap .activity .middle {
+  margin: 0 3rpx;
+}
+.pet-detail-page .pet-detail-content-wrap .activity .right {
+  border-radius: 0 12rpx 12rpx 0;
+  margin-left: 3rpx;
+}
+.pet-detail-page .pet-detail-content-wrap .address {
+  height: 90rpx;
+  line-height: 90rpx;
+  font-size: 28rpx;
+  color: #424242;
+  padding: 0 60rpx;
+  border-bottom: 1rpx solid #F4F5F7;
+}
+.pet-detail-page .pet-detail-content-wrap .address image {
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 14rpx;
+}
+.pet-detail-page .pet-detail-content-wrap .tabs {
+  height: 140rpx;
+  padding: 0 60rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-bottom: 1rpx solid #F4F5F7;
+}
+.pet-detail-page .pet-detail-content-wrap .tabs .tab {
+  border-radius: 10rpx;
+  opacity: 0.5;
+  border: 2rpx solid #b8bbbc;
+  font-size: 30rpx;
+  color: #b8bbbc;
+  padding: 10rpx;
+}
+.pet-detail-page .pet-detail-content-wrap .tabs .current {
+  border: 2rpx solid #facc90;
+  color: #fdc67f;
+}
