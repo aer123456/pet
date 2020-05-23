@@ -1,6 +1,6 @@
 /**app.wxss**/
 page {
-  font-family:PingFangSC-Semibold,PingFang SC;
+  font-family: PingFangSC-Regular,PingFang SC;
 } 
 .box-shadow {
   box-shadow: 0px 2rpx 20rpx 0rpx rgba(0,0,0,0.06);
