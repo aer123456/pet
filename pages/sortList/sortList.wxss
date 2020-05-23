@@ -1,1 +1,27 @@
-/* pages/sortList/sortList.wxss */
+.sort-list-page .left-nav {
+  width: 109rpx;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background: #fef2e3;
+  overflow-y: scroll;
+}
+.sort-list-page .left-nav .nav-item {
+  width: 42rpx;
+  height: 128rpx;
+  margin: 30rpx 0 30rpx 29rpx;
+  position: relative;
+  font-size: 30rpx;
+  color: #fdc67f;
+}
+.sort-list-page .left-nav .nav-item image {
+  width: 36rpx;
+  height: 82rpx;
+  position: absolute;
+  right: 0;
+  top: 23rpx;
+}
+.sort-list-page .left-nav .current-nav {
+  color: #f0af5a;
+}

@@ -68,7 +68,6 @@
   position: relative;
   top: -40rpx;
   left: -40rpx;
-  border: 1rpx solid #F4F5F7;
   border-radius: 12px;
 }
 .my-page .order-wrap .orders .order .img image {
