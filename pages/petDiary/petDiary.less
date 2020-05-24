@@ -1,5 +1,9 @@
 // out: petDiary.wxss
+page {
+  height: 100%;
+}
 .pet-diary-page {
+  height: 100%;
   .no-content {
     padding-top: 250rpx;
     text-align: center;
@@ -17,6 +21,7 @@
     }
   }
   .diary-content-wrap {
+    height: 100%;
     padding-top: 320rpx;
     background:linear-gradient(180deg,rgba(255,241,223,1) 0%,rgba(255,229,194,1) 100%);
     .headings {
@@ -29,7 +34,6 @@
       left: 0;
       top: 0;
       z-index: 9;
-      // background:linear-gradient(180deg,rgba(255,241,223,1) 0%,rgba(255,229,194,1) 100%);
       .heading {
         display: inline-block;
         width: 140rpx;
@@ -54,7 +58,16 @@
         }
       }
     }
+    .diary-wrap-outter {
+      height: 100%;
+      position: fixed;
+      top: 270rpx;
+      left: 0;
+      right: 0;
+      overflow-y: scroll;
+    }
     .diary-wrap {
+      height: 100%;
       background: #ffffff;
       border-radius:40rpx 40rpx 0px 0px;
       margin-top: 60rpx;
@@ -81,6 +94,8 @@
       }
       .diary-content {
         padding: 60rpx;
+        background: #ffffff;
+        padding-bottom: 250rpx;
         .diary {
           .card {
             display: flex;
