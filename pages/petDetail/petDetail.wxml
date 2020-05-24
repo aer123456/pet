@@ -1,2 +1,159 @@
-<!--pages/petDetail/petDetail.wxml-->
-<text>pages/petDetail/petDetail.wxml</text>
+<view class="pet-detail-page">
+  <view class="pet-detail-banner">
+
+  </view>
+  <view class="pet-detail-content-wrap">
+    <view class="view1">
+      <view class="title">
+        <text>小豆丁</text>
+        <image src="../../assets/image/my/sex1.png" />
+      </view>
+      <view class="birth">
+        <image src="../../assets/image/icon/petDetail/birth.png" />
+        <text >猫咪生日：2020.5.1</text>
+      </view>
+      <view class="other">洗澡/洗澡容器/盆</view>
+      <view class="marks">
+        <text>商品标签</text>
+        <text>商品标签</text>
+        <text>商品标签</text>
+      </view>
+      <view class="price">
+        <text>￥3,500</text>
+        <text class="discount">￥4,500</text>
+      </view>
+    </view>
+    <view class="activity">
+      距离活动结束：<text class="left">46</text>:<text class="middle">25</text>:<text class="right">33</text>
+    </view>
+    <view class="address">
+      <image src="../../assets/image/icon/petDetail/addr.png" />
+      所属门店仓库：证大大拇指店
+    </view>
+    <view class="tabs">
+      <view class="tab {{ currentTab == 1 ? 'current' : ''}}" data-index="{{1}}" bindtap="switchTab">喵喵详情</view>
+      <view class="tab {{ currentTab == 2 ? 'current' : ''}}" data-index="{{2}}" bindtap="switchTab">品种分析</view>
+      <view class="tab {{ currentTab == 3 ? 'current' : ''}}" data-index="{{3}}" bindtap="switchTab">购买流程</view>
+      <view class="tab {{ currentTab == 4 ? 'current' : ''}}" data-index="{{4}}" bindtap="switchTab">售后服务</view>
+    </view>
+
+    <view class="tab1-content" wx:if="{{currentTab == 1}}">
+      <view class="title padding-60"><text>Color</text>    毛色</view>
+      <view class="color-wrap padding-60">
+        <view wx:for="{{colors[0]}}" wx:for-item="color" class="color-content">
+          <view class="img">
+            <image class="ig" src="{{color.img}}"  />
+            <image wx:if="{{color.desc == '红色'}}" class="bg" src="../../assets/image/icon/petDetail/colors.png"  />
+          </view>
+          <text>{{color.desc}}</text>
+        </view>
+      </view>
+      <view class="color-wrap padding-60">
+        <view wx:for="{{colors[1]}}" wx:for-item="color" class="color-content">
+          <view class="img">
+            <image class="ig" src="{{color.img}}"  />
+            <image wx:if="{{color.desc == '红色'}}" class="bg" src="../../assets/image/icon/petDetail/colors.png"  />
+          </view>
+          <text>{{color.desc}}</text>
+        </view>
+      </view>
+
+      <view class="title padding-60"><text>Color</text>    瞳孔颜色</view>
+      <view class="color-wrap eye-wrap padding-60">
+        <view wx:for="{{eyes}}" wx:for-item="eye" class="color-content">
+          <view class="img">
+            <image class="ig" src="{{eye.img}}"  />
+            <image wx:if="{{eye.desc == '绿色'}}" class="bg" src="../../assets/image/icon/petDetail/eyes.png"  />
+          </view>
+          <text>{{eye.desc}}</text>
+        </view>
+      </view>
+
+      <view class="title padding-60"><text>毛质</text></view>
+      <view class="tab-items padding-60">
+        <view  wx:for="{{furs}}" wx:for-item="fur" class="{{fur == '无毛' ? 'current' : '' }} tab-item">
+          {{fur}}
+          <image wx:if="{{fur == '无毛'}}"  src="../../assets/image/icon/petDetail/select.png" />
+        </view>
+      </view>
+
+      <view class="title padding-60"><text>耳朵</text></view>
+      <view class="tab-items padding-60">
+        <view wx:for="{{ears}}" wx:for-item="ear" class="{{ear == '卷耳' ? 'current' : '' }} tab-item">
+          {{ear}}
+          <image wx:if="{{ear == '卷耳'}}" src="../../assets/image/icon/petDetail/select.png" />
+        </view>
+      </view>
+
+      <view class="title padding-60"><text>疫苗信息</text></view>
+      <view class="font-descs padding-60">
+        <text>2020年5月1日，疫苗（辉瑞妙三多猫三联）。体内外驱虫（博莱恩）。</text>
+      </view>
+      <view class="title padding-60"><text>驱虫信息</text></view>
+      <view class="font-descs padding-60">
+        <text>2020年4月16日，体内外驱虫（博莱恩）。</text>
+      </view>
+      <view class="title padding-60"><text>是否绝育</text><text class="right">未绝育</text></view>
+      <view class="gap" />
+
+      <view class="title padding-60"><text>Cat</text>      喵喵简介</view>
+      <view class="font-descs padding-60">
+        <text class="intro">短毛血统，生性活泼好动，吃饭香，喜欢让人抱摸头等，会撒娇卖萌与人较为亲近，长毛血统，生性活泼好动，吃饭香，喜欢让人抱，会撒娇卖萌与人较为亲近。</text>
+        <image class="intro" src="../../assets/image/catImg.png" mode="widthFix" />
+        <text class="intro">短毛血统，生性活泼好动，吃饭香，喜欢让人抱摸头等，会撒娇卖萌与人较为亲近，长毛血统，生性活泼好动，吃饭香，喜欢让人抱，会撒娇卖萌与人较为亲近。</text>
+        <image class="intro" src="../../assets/image/catImg.png" mode="widthFix" />
+      </view>
+
+    </view>
+
+    <view class="tab1-content" wx:if="{{currentTab == 2}}">
+      <view class="title padding-60"><text>Cat</text>      品种分析</view>
+      <view class="font-descs padding-60">
+        <text class="intro">短毛血统，生性活泼好动，吃饭香，喜欢让人抱摸头等，会撒娇卖萌与人较为亲近，长毛血统，生性活泼好动，吃饭香，喜欢让人抱，会撒娇卖萌与人较为亲近。</text>
+        <image class="intro" src="../../assets/image/catImg.png" mode="widthFix" />
+        <text class="intro">短毛血统，生性活泼好动，吃饭香，喜欢让人抱摸头等，会撒娇卖萌与人较为亲近，长毛血统，生性活泼好动，吃饭香，喜欢让人抱，会撒娇卖萌与人较为亲近。</text>
+        <image class="intro" src="../../assets/image/catImg.png" mode="widthFix" />
+      </view>
+    </view>
+
+    <view class="tab1-content" wx:if="{{currentTab == 3}}">
+      <view class="title padding-60"><text>Cat</text>      购买流程</view>
+      <view class="font-descs padding-60">
+        <text class="intro">短毛血统，生性活泼好动，吃饭香，喜欢让人抱摸头等，会撒娇卖萌与人较为亲近，长毛血统，生性活泼好动，吃饭香，喜欢让人抱，会撒娇卖萌与人较为亲近。</text>
+        <image class="intro" src="../../assets/image/catImg.png" mode="widthFix" />
+        <text class="intro">短毛血统，生性活泼好动，吃饭香，喜欢让人抱摸头等，会撒娇卖萌与人较为亲近，长毛血统，生性活泼好动，吃饭香，喜欢让人抱，会撒娇卖萌与人较为亲近。</text>
+        <image class="intro" src="../../assets/image/catImg.png" mode="widthFix" />
+      </view>
+    </view>
+
+    <view class="tab1-content" wx:if="{{currentTab == 4}}">
+      <view class="title padding-60"><text>Cat</text>      售后服务</view>
+      <view class="font-descs padding-60">
+        <text class="intro">短毛血统，生性活泼好动，吃饭香，喜欢让人抱摸头等，会撒娇卖萌与人较为亲近，长毛血统，生性活泼好动，吃饭香，喜欢让人抱，会撒娇卖萌与人较为亲近。</text>
+        <image class="intro" src="../../assets/image/catImg.png" mode="widthFix" />
+        <text class="intro">短毛血统，生性活泼好动，吃饭香，喜欢让人抱摸头等，会撒娇卖萌与人较为亲近，长毛血统，生性活泼好动，吃饭香，喜欢让人抱，会撒娇卖萌与人较为亲近。</text>
+        <image class="intro" src="../../assets/image/catImg.png" mode="widthFix" />
+      </view>
+    </view>
+  </view>
+
+  <view class="pay-buttons">
+    <view class="chat-wrap box-shadow">
+      <image class="chat" src="../../assets/image/icon/petDetail/serv.png" />
+    </view>
+    <view class="pay-button" bindtap="showModal">
+      预付定金：￥1,900
+      <image src="../../assets/image/icon/petDetail/go.png" />
+    </view>
+  </view>
+
+  <view class="pay-modal" wx:if="{{visible}}">
+    <view class="pay-dingjin">
+      <image src="../../assets/image/icon/petDetail/close.png" bindtap="closeModal" />
+      <view class="title">定金：￥1,000</view>
+      <input type="number" placeholder="请输入手机号"
+        value="{{}}" bindinput="inputPhone" />
+      <view class="pay-btn {{disableInput ? 'disable' : ''}}" bindtap="submit">确认支付</view>
+    </view>
+  </view>
+</view>

@@ -3,7 +3,7 @@
   <view class="head">
     <image class="head-img" src='../../assets/image/my/head.png' />
     <view class="head-text">
-      <view>未登录<image src='../../assets/image/my/sex.png' /></view>
+      <view>未登录<image src='../../assets/image/my/sex1.png' /></view>
       <!-- <view class="num">189 **** 9873</view> -->
       <button>微信登录</button>
     </view>
@@ -22,7 +22,7 @@
     <view class="orders">
       <view class="order box-shadow">
         <view class="img">
-          <image src="../../assets/image/my/head.png" />
+          <image src="../../assets/image/my/cat.png" />
         </view>
         <view class="desc">
           <view class="names">

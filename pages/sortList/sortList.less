@@ -1,0 +1,91 @@
+// out: sortList.wxss
+.sort-list-page {
+  width: 100%;
+  min-height: 100%;
+  .left-nav-wrap {
+    width: 109rpx;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    overflow-y: scroll;
+    padding-right: 20rpx;
+    &::-webkit-scrollbar {display:none}
+    .left-nav {
+      width: 100%;
+      height: 100%;
+      background:rgba(254,242,227,1);
+      padding-top: 30rpx;
+      .nav-item {
+        width: 42rpx;
+        margin: 30rpx 0 0 29rpx;
+        padding-bottom: 30rpx;
+        position: relative;
+        font-size: 30rpx;
+        color:rgba(253,198,127,1);
+        line-height: 32rpx;
+        image {
+          width: 36rpx;
+          height: 82rpx;
+          position: absolute;
+          left: 54rpx;
+          top: 23rpx;
+        }
+      }
+      .current-nav {
+        color:rgba(240,175,90,1);
+      }
+    }
+  }
+  .right-content {
+    width: 100%;
+    padding-left: 170rpx;
+    box-sizing: border-box;
+    .card {
+      border-radius: 20rpx 0 0 20rpx;
+      padding: 20rpx 0 20rpx 20rpx;
+      margin-top: 40rpx;
+      display: flex;
+      .card-img {
+        width: 180rpx;
+        height: 180rpx;
+        border-radius:12px;
+      }
+      .card-content {
+        padding-left: 20rpx;
+        flex: 1;
+        .card-content-title {
+          font-size:32rpx;
+          color:rgba(66,66,66,1);
+          line-height:45rpx;
+        }
+        .card-content-desc {
+          font-size:24rpx;
+          color:rgba(184,187,188,1);
+          line-height:33rpx;
+          margin: 10rpx 0 14rpx 0;
+        }
+        .card-content-price {
+          font-size:36rpx;
+          color:rgba(240,175,90,1);
+          line-height:50rpx;
+          .red {
+            color:rgba(240,90,90,1);
+          }
+          .discount {
+            font-size:24rpx;
+            color:rgba(184,187,188,1);
+            line-height: 33rpx;
+            text-decoration: line-through;
+          }
+          image {
+            width:126rpx;
+            height:42rpx;
+            float: right;
+            margin-top: 5rpx;
+          }
+        }
+      }
+    }
+  }
+}

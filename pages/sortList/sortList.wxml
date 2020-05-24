@@ -1,2 +1,68 @@
-<!--pages/sortList/sortList.wxml-->
-<text>pages/sortList/sortList.wxml</text>
+<view class="sort-list-page">
+  <view class="left-nav-wrap">
+    <view class="left-nav">
+      <view class="nav-item current-nav">
+        <text>人气推荐</text>
+        <image src="../../assets/image/icon/sortList/dot.png" />
+      </view>
+      <view class="nav-item">
+        <text>精挑细选</text>
+        <image src="../../assets/image/icon/sortList/dot.png" />
+      </view>
+      <view class="nav-item">
+        <text>特色萌物</text>
+        <image src="../../assets/image/icon/sortList/dot.png" />
+      </view>
+      <view class="nav-item">
+        <text>调皮捣蛋</text>
+        <image src="../../assets/image/icon/sortList/dot.png" />
+      </view>
+      <view class="nav-item">
+        <text>安静粘人</text>
+        <image src="../../assets/image/icon/sortList/dot.png" />
+      </view>
+      <view class="nav-item">
+        <text>活泼好动</text>
+        <image src="../../assets/image/icon/sortList/dot.png" />
+      </view>
+    </view>
+  </view>
+  <view class="right-content">
+    <view class="card box-shadow">
+      <image class="card-img" src='../../assets/image/my/cat.png' />
+      <view class="card-content">
+        <view class="card-content-title">小豆丁</view>
+        <view class="card-content-desc">男宝/已打疫苗/蓝色眼睛/活泼 /已绝育</view>
+        <view class="card-content-price">
+          <text class="money">￥2800</text>
+          <text class="discount">￥30000</text>
+          <image src="../../assets/image/icon/sortList/buy.png" />
+        </view>
+      </view>
+    </view>
+    <view class="card box-shadow">
+      <image class="card-img" src='../../assets/image/my/cat.png' />
+      <view class="card-content">
+        <view class="card-content-title">小豆丁</view>
+        <view class="card-content-desc">男宝/已打疫苗/蓝色眼睛/活泼 /已绝育</view>
+        <view class="card-content-price">
+          <text class="money red">￥2,800</text>
+          <text class="discount">￥3,000</text>
+          <image src="../../assets/image/icon/sortList/buy.png" />
+        </view>
+      </view>
+    </view>
+    <view class="card box-shadow">
+      <image class="card-img" src='../../assets/image/my/cat.png' />
+      <view class="card-content">
+        <view class="card-content-title">小豆丁</view>
+        <view class="card-content-desc">男宝/已打疫苗/蓝色眼睛/活泼 /已绝育</view>
+        <view class="card-content-price">
+          <text class="money">￥2800</text>
+          <text class="discount">￥30000</text>
+          <image src="../../assets/image/icon/sortList/buy.png" />
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
