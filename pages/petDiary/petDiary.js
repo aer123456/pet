@@ -1,3 +1,10 @@
+/**
+* @file: description
+* @author: huguantao
+* @Date: 2020-05-19 21:03:33
+* @LastEditors: huguantao
+* @LastEditTime: 2020-05-24 13:59:14
+ */
 // pages/petDiary/petDiary.js
 Page({
 
@@ -5,7 +12,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    isEmpty: false
   },
 
   /**
