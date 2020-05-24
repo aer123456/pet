@@ -2,9 +2,9 @@
 <view class="my-page">
   <header goBackIcon="{{true}}" />
   <view class="head">
-    <image class="head-img" src='../../assets/image/my/head.png' />
+    <image class="head-img" src='http://stc.unipet-group.com/mini/my/head.png' />
     <view class="head-text">
-      <view>未登录<image src='../../assets/image/my/sex1.png' /></view>
+      <view>未登录<image src='http://stc.unipet-group.com/mini/my/sex1.png' /></view>
       <!-- <view class="num">189 **** 9873</view> -->
       <button>微信登录</button>
     </view>
@@ -13,17 +13,17 @@
   <view class="order-wrap">
     <view class="order-title">我的预定</view>
     <!-- <view class="no-login empty">
-      <image src="../../assets/image/my/noLogin.png" />
+      <image src="http://stc.unipet-group.com/mini/my/noLogin.png" />
       <view class="empty-text">登录后显示</view>
     </view> -->
     <!-- <view class="no-order empty">
-      <image src="../../assets/image/my/noOrder.png" />
+      <image src="http://stc.unipet-group.com/mini/my/noOrder.png" />
       <text class="empty-text">暂无预定</text>
     </view> -->
     <view class="orders">
       <view class="order box-shadow">
         <view class="img">
-          <image src="../../assets/image/my/cat.png" />
+          <image src="http://stc.unipet-group.com/mini/my/cat.png" />
         </view>
         <view class="desc">
           <view class="names">
@@ -43,11 +43,11 @@
   <view class="contacts-wrap">
     <view class="contacts box-shadow">
       <view class="contact">
-        <image src="../../assets/image/icon/other/msg.png" />
+        <image src="http://stc.unipet-group.com/mini/icon/other/msg.png" />
         <text>联系我们</text>
       </view>
       <view class="contact bordered">
-        <image src="../../assets/image/icon/other/tel.png" />
+        <image src="http://stc.unipet-group.com/mini/icon/other/tel.png" />
         <text>致电我们</text>
       </view>
     </view>

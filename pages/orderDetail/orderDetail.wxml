@@ -3,7 +3,7 @@
   <view class="wrap">
     <view class="order box-shadow">
       <view class="img">
-        <image src="../../assets/image/my/cat.png" />
+        <image src="http://stc.unipet-group.com/mini/my/cat.png" />
       </view>
       <view class="desc">
         <view class="names">已退款</view>
@@ -16,14 +16,14 @@
   <view class="order-detail box-shadow">
     <view class="order-title">
       <view>
-        <image src="../../assets/image/icon/petDetail/store.png" />
+        <image src="http://stc.unipet-group.com/mini/icon/petDetail/store.png" />
         <text>悠尼宠物</text>
       </view>
       <view class="orange">已交付</view>
     </view>
     <view class="gap" />
     <view class="pics">
-      <image src="../../assets/image/my/cat.png" />
+      <image src="http://stc.unipet-group.com/mini/my/cat.png" />
       <view class="pics-desc">
         <view class="pic-title">小石头</view>
         <view class="pic-desc">男宝/已打疫苗/蓝色眼睛/活泼 /已绝育</view>
@@ -73,11 +73,11 @@
   <view class="contacts-wrap">
     <view class="contacts box-shadow">
       <view class="contact">
-        <image src="../../assets/image/icon/other/msg.png" />
+        <image src="http://stc.unipet-group.com/mini/icon/other/msg.png" />
         <text>联系我们</text>
       </view>
       <view class="contact bordered">
-        <image src="../../assets/image/icon/other/tel.png" />
+        <image src="http://stc.unipet-group.com/mini/icon/other/tel.png" />
         <text>致电我们</text>
       </view>
     </view>

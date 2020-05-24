@@ -19,11 +19,11 @@
             <view class="motion-info">
               <view class="motion-info-title">
                 <text>{{item.name}}</text>
-                <image class="gender-icon" mode="heightFix" src="{{item.gender == 'M' ? '../../assets/image/home/male.png' : '../../assets/image/home/female.png'}}"></image>
+                <image class="gender-icon" mode="heightFix" src="{{item.gender == 'M' ? 'http://stc.unipet-group.com/mini/home/male.png' : 'http://stc.unipet-group.com/mini/home/female.png'}}"></image>
               </view>
               <view class="motion-info-text">
                 <text>{{item.breed}} / {{item.age}}</text>
-                <image class="arrow-icon" src="../../assets/image/icon/other/arrow.png"></image>
+                <image class="arrow-icon" src="http://stc.unipet-group.com/mini/icon/other/arrow.png"></image>
               </view>
             </view>
           </navigator>

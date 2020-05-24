@@ -14,30 +14,30 @@ Page({
   data: {
     colors: [
       [
-        {img: '../../assets/image/icon/petDetail/color1.png', desc: '金色'},
-        {img: '../../assets/image/icon/petDetail/color2.png', desc: '银色'},
-        {img: '../../assets/image/icon/petDetail/color3.png', desc: '蓝色'},
-        {img: '../../assets/image/icon/petDetail/color4.png', desc: '红色'},
-        {img: '../../assets/image/icon/petDetail/color5.png', desc: '黑色'},
-        {img: '../../assets/image/icon/petDetail/color6.png', desc: '白色'}
+        {img: 'http://stc.unipet-group.com/mini/icon/petDetail/color1.png', desc: '金色'},
+        {img: 'http://stc.unipet-group.com/mini/icon/petDetail/color2.png', desc: '银色'},
+        {img: 'http://stc.unipet-group.com/mini/icon/petDetail/color3.png', desc: '蓝色'},
+        {img: 'http://stc.unipet-group.com/mini/icon/petDetail/color4.png', desc: '红色'},
+        {img: 'http://stc.unipet-group.com/mini/icon/petDetail/color5.png', desc: '黑色'},
+        {img: 'http://stc.unipet-group.com/mini/icon/petDetail/color6.png', desc: '白色'}
       ],
       [
-        {img: '../../assets/image/icon/petDetail/color7.png', desc: '黄色'},
-        {img: '../../assets/image/icon/petDetail/color8.png', desc: '灰色'},
-        {img: '../../assets/image/icon/petDetail/color9.png', desc: '渐层'},
-        {img: '../../assets/image/icon/petDetail/color10.png', desc: '斑纹'},
-        {img: '../../assets/image/icon/petDetail/color11.png', desc: '花纹'},
-        {img: '../../assets/image/icon/petDetail/color12.png', desc: '其他'}
+        {img: 'http://stc.unipet-group.com/mini/icon/petDetail/color7.png', desc: '黄色'},
+        {img: 'http://stc.unipet-group.com/mini/icon/petDetail/color8.png', desc: '灰色'},
+        {img: 'http://stc.unipet-group.com/mini/icon/petDetail/color9.png', desc: '渐层'},
+        {img: 'http://stc.unipet-group.com/mini/icon/petDetail/color10.png', desc: '斑纹'},
+        {img: 'http://stc.unipet-group.com/mini/icon/petDetail/color11.png', desc: '花纹'},
+        {img: 'http://stc.unipet-group.com/mini/icon/petDetail/color12.png', desc: '其他'}
       ]
     ],
     eyes: [
-      {img: '../../assets/image/icon/petDetail/eye1.png', desc: '蓝色'},
-      {img: '../../assets/image/icon/petDetail/eye2.png', desc: '绿色'},
-      {img: '../../assets/image/icon/petDetail/eye3.png', desc: '琥珀色'},
-      {img: '../../assets/image/icon/petDetail/eye4.png', desc: '浅棕色'},
-      {img: '../../assets/image/icon/petDetail/eye5.png', desc: '紫铜色'},
-      {img: '../../assets/image/icon/petDetail/eye6.png', desc: '鸳鸯色'},
-      {img: '../../assets/image/icon/petDetail/eye7.png', desc: '其他'},
+      {img: 'http://stc.unipet-group.com/mini/icon/petDetail/eye1.png', desc: '蓝色'},
+      {img: 'http://stc.unipet-group.com/mini/icon/petDetail/eye2.png', desc: '绿色'},
+      {img: 'http://stc.unipet-group.com/mini/icon/petDetail/eye3.png', desc: '琥珀色'},
+      {img: 'http://stc.unipet-group.com/mini/icon/petDetail/eye4.png', desc: '浅棕色'},
+      {img: 'http://stc.unipet-group.com/mini/icon/petDetail/eye5.png', desc: '紫铜色'},
+      {img: 'http://stc.unipet-group.com/mini/icon/petDetail/eye6.png', desc: '鸳鸯色'},
+      {img: 'http://stc.unipet-group.com/mini/icon/petDetail/eye7.png', desc: '其他'},
     ],
     furs: ['短毛', '长毛', '卷毛', '无毛', '其他'],
     ears: ['立耳', '折耳', '卷耳', '其他'],

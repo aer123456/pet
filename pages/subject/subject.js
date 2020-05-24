@@ -7,43 +7,43 @@ Page({
   data: {
     perferList: [
       {
-        image: '../../assets/image/home/cat4.png',
+        image: 'http://stc.unipet-group.com/mini/home/cat4.png',
         name: '小豆丁',
         price: '2,000',
         link: '/pages/test/test'
       },
       {
-        image: '../../assets/image/home/cat3.png',
+        image: 'http://stc.unipet-group.com/mini/home/cat3.png',
         name: '小豆丁',
         price: '2,000',
         link: '/pages/test/test'
       },
       {
-        image: '../../assets/image/home/cat5.png',
+        image: 'http://stc.unipet-group.com/mini/home/cat5.png',
         name: '小豆丁',
         price: '2,000',
         link: '/pages/test/test'
       },
       {
-        image: '../../assets/image/home/cat6.png',
+        image: 'http://stc.unipet-group.com/mini/home/cat6.png',
         name: '小豆丁',
         price: '2,000',
         link: '/pages/test/test'
       },
       {
-        image: '../../assets/image/home/cat5.png',
+        image: 'http://stc.unipet-group.com/mini/home/cat5.png',
         name: '小豆丁',
         price: '2,000',
         link: '/pages/test/test'
       },
       {
-        image: '../../assets/image/home/cat4.png',
+        image: 'http://stc.unipet-group.com/mini/home/cat4.png',
         name: '小豆丁',
         price: '2,000',
         link: '/pages/test/test'
       },
       {
-        image: '../../assets/image/home/cat6.png',
+        image: 'http://stc.unipet-group.com/mini/home/cat6.png',
         name: '小豆丁',
         price: '2,000',
         link: '/pages/test/test'

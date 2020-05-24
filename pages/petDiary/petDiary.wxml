@@ -1,25 +1,25 @@
 <view class="pet-diary-page">
   <header goBackIcon="{{true}}" text="{{isEmpty ? '爱宠日记' : ''}}" border="{{isEmpty}}" needHolder="{{false}}" />
   <view class="no-content" wx:if="{{isEmpty}}">
-    <image src="../../assets/image/diary/no.png" />
+    <image src="http://stc.unipet-group.com/mini/diary/no.png" />
     <view class="no-text">预定成功后就可以看到宝贝的成长记录啦！</view>
   </view>
   <view class="diary-content-wrap" wx:if="{{!isEmpty}}">
     <view class="headings">
       <view class="heading">
-        <image src="../../assets/image/catHead.png" />
+        <image src="http://stc.unipet-group.com/mini/catHead.png" />
         <view class="name">尼古拉斯</view>
       </view>
       <view class="heading current">
-        <image src="../../assets/image/catHead.png" />
+        <image src="http://stc.unipet-group.com/mini/catHead.png" />
         <view class="name">尼古拉斯</view>
       </view>
       <view class="heading">
-        <image src="../../assets/image/catHead.png" />
+        <image src="http://stc.unipet-group.com/mini/catHead.png" />
         <view class="name">尼古拉斯</view>
       </view>
       <view class="heading">
-        <image src="../../assets/image/catHead.png" />
+        <image src="http://stc.unipet-group.com/mini/catHead.png" />
         <view class="name">尼古拉斯</view>
       </view>
     </view>
@@ -27,9 +27,9 @@
     <view class="diary-wrap-outter">
       <view class="diary-wrap">
         <view class="heads">
-          <image class="head" src="../../assets/image/my/cat.png" />
+          <image class="head" src="http://stc.unipet-group.com/mini/my/cat.png" />
           <view class="name">尼古拉斯
-            <image src="../../assets/image/my/sex1.png" />
+            <image src="http://stc.unipet-group.com/mini/my/sex1.png" />
           </view>
         </view>
         <view class="diary-content">
@@ -43,14 +43,14 @@
               </view>
               <view class="event box-shadow">
                 <view class="time">
-                  <image src="../../assets/image/icon/diary/worm.png" />
+                  <image src="http://stc.unipet-group.com/mini/icon/diary/worm.png" />
                   <text>    3M</text>
                 </view>
                 <view class="descs">
                   <view class="desc">第一次洗澡</view>
                   <view class="desc">第一次睡觉</view>
                 </view>
-                <image class="doing" src="../../assets/image/icon/diary/todo.png" />
+                <image class="doing" src="http://stc.unipet-group.com/mini/icon/diary/todo.png" />
               </view>
             </view>
 
@@ -62,14 +62,14 @@
               </view>
               <view class="event box-shadow">
                 <view class="time">
-                  <image src="../../assets/image/icon/diary/worm.png" />
+                  <image src="http://stc.unipet-group.com/mini/icon/diary/worm.png" />
                   <text>    3M</text>
                 </view>
                 <view class="descs">
                   <view class="desc">第一次洗澡</view>
                   <view class="desc">第一次睡觉</view>
                 </view>
-                <image class="doing" src="../../assets/image/icon/diary/todo.png" />
+                <image class="doing" src="http://stc.unipet-group.com/mini/icon/diary/todo.png" />
               </view>
             </view>
 
@@ -80,13 +80,13 @@
               </view>
               <view class="event box-shadow">
                 <view class="time">
-                  <image src="../../assets/image/icon/diary/worm.png" />
+                  <image src="http://stc.unipet-group.com/mini/icon/diary/worm.png" />
                   <text>    3M</text>
                 </view>
                 <view class="descs">
                   <view class="desc">第一次洗澡</view>
                 </view>
-                <image class="doing" src="../../assets/image/icon/diary/todo.png" />
+                <image class="doing" src="http://stc.unipet-group.com/mini/icon/diary/todo.png" />
               </view>
             </view>
 
@@ -97,13 +97,13 @@
               </view>
               <view class="event box-shadow">
                 <view class="time">
-                  <image src="../../assets/image/icon/diary/worm.png" />
+                  <image src="http://stc.unipet-group.com/mini/icon/diary/worm.png" />
                   <text>    3M</text>
                 </view>
                 <view class="descs">
                   <view class="desc">第一次洗澡</view>
                 </view>
-                <image class="doing" src="../../assets/image/icon/diary/todo.png" />
+                <image class="doing" src="http://stc.unipet-group.com/mini/icon/diary/todo.png" />
               </view>
             </view>
 
@@ -114,13 +114,13 @@
               </view>
               <view class="event box-shadow">
                 <view class="time">
-                  <image src="../../assets/image/icon/diary/worm.png" />
+                  <image src="http://stc.unipet-group.com/mini/icon/diary/worm.png" />
                   <text>    3M</text>
                 </view>
                 <view class="descs">
                   <view class="desc">第一次洗澡</view>
                 </view>
-                <image class="doing" src="../../assets/image/icon/diary/todo.png" />
+                <image class="doing" src="http://stc.unipet-group.com/mini/icon/diary/todo.png" />
               </view>
             </view>
 
@@ -131,13 +131,13 @@
               </view>
               <view class="event box-shadow">
                 <view class="time">
-                  <image src="../../assets/image/icon/diary/worm.png" />
+                  <image src="http://stc.unipet-group.com/mini/icon/diary/worm.png" />
                   <text>    3M</text>
                 </view>
                 <view class="descs">
                   <view class="desc">第一次洗澡</view>
                 </view>
-                <image class="doing" src="../../assets/image/icon/diary/todo.png" />
+                <image class="doing" src="http://stc.unipet-group.com/mini/icon/diary/todo.png" />
               </view>
             </view>
 
@@ -148,13 +148,13 @@
               </view>
               <view class="event box-shadow">
                 <view class="time">
-                  <image src="../../assets/image/icon/diary/worm.png" />
+                  <image src="http://stc.unipet-group.com/mini/icon/diary/worm.png" />
                   <text>    3M</text>
                 </view>
                 <view class="descs">
                   <view class="desc">第一次洗澡</view>
                 </view>
-                <image class="doing" src="../../assets/image/icon/diary/todo.png" />
+                <image class="doing" src="http://stc.unipet-group.com/mini/icon/diary/todo.png" />
               </view>
             </view>
 
@@ -165,13 +165,13 @@
               </view>
               <view class="event box-shadow">
                 <view class="time">
-                  <image src="../../assets/image/icon/diary/worm.png" />
+                  <image src="http://stc.unipet-group.com/mini/icon/diary/worm.png" />
                   <text>    3M</text>
                 </view>
                 <view class="descs">
                   <view class="desc">第一次洗澡</view>
                 </view>
-                <image class="doing" src="../../assets/image/icon/diary/todo.png" />
+                <image class="doing" src="http://stc.unipet-group.com/mini/icon/diary/todo.png" />
               </view>
             </view>
 

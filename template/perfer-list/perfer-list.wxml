@@ -7,7 +7,7 @@
     </view>
     <view class="more-link">
       <navigator hover-class="more-link-hover" url="{{link}}">
-        <image class="more-link-icon" src="../../assets/image/icon/other/more-link.png"></image>
+        <image class="more-link-icon" src="http://stc.unipet-group.com/mini/icon/other/more-link.png"></image>
       </navigator>
     </view>
   </view>
