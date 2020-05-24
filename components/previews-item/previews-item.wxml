@@ -1,0 +1,10 @@
+<!-- 首页预告组件 -->
+<navigator class="previews-link" url="{{link}}">
+  <view class="previews-item">
+    <image class="previews-thumbnail" src="{{image}}"></image>
+    <view class="previews-details">
+      <view>{{title}}</view>
+      <view>{{time}}</view>
+    </view>
+  </view>
+</navigator>

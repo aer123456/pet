@@ -5,21 +5,135 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    // Banner数据
+    banners:[
+      "../../assets/image/home/banner1.jpg",
+      "../../assets/image/home/banner1.jpg",
+      "../../assets/image/home/banner1.jpg",
+      "../../assets/image/home/banner1.jpg",
+    ],
+    // 推荐预告
+    previews: [
+      "../../assets/image/home/cat1.png",
+      "../../assets/image/home/cat2.png"
+    ],
+    // 推荐列表1
+    motions1: [
+      {
+        image: '../../assets/image/home/motion1.png',
+        name: '小豆丁',
+        gender: 'M',
+        breed: '美国短毛',
+        age: '1个月',
+        link: '/pages/subject/subject'
+      },
+      {
+        image: '../../assets/image/home/motion1.png',
+        name: '小白豆腐',
+        gender: 'F',
+        breed: '英国短毛',
+        age: '半个月',
+        link: '/pages/subject/subject'
+      },
+      {
+        image: '../../assets/image/home/motion1.png',
+        name: '小豆丁',
+        gender: 'M',
+        breed: '美国短毛',
+        age: '1个月',
+        link: '/pages/subject/subject'
+      },
+      {
+        image: '../../assets/image/home/motion1.png',
+        name: '小白豆腐',
+        gender: 'F',
+        breed: '英国短毛',
+        age: '半个月',
+        link: '/pages/subject/subject'
+      }
+    ],
+    // 推荐列表2
+    motions2: [
+      {
+        image: '../../assets/image/home/motion2.png',
+        name: '小豆丁',
+        price: '2,000',
+        link: '/pages/subject/subject'
+      },
+      {
+        image: '../../assets/image/home/motion3.png',
+        name: '小豆丁',
+        price: '2,000',
+        link: '/pages/subject/subject'
+      },
+      {
+        image: '../../assets/image/home/motion2.png',
+        name: '小豆丁',
+        price: '2,000',
+        link: '/pages/subject/subject'
+      },
+      {
+        image: '../../assets/image/home/motion3.png',
+        name: '小豆丁',
+        price: '2,000',
+        link: '/pages/subject/subject'
+      },
+    ],
+    // 推荐列表3
+    motions3: [
+      {
+        image: '../../assets/image/home/motion4.png',
+        name: '小豆丁',
+        price: '2,000',
+        link: '/pages/subject/subject'
+      },
+      {
+        image: '../../assets/image/home/motion5.png',
+        name: '小豆丁',
+        price: '2,000',
+        link: '/pages/subject/subject'
+      },
+      {
+        image: '../../assets/image/home/motion6.png',
+        name: '小豆丁',
+        price: '2,000',
+        link: '/pages/subject/subject'
+      },
+      {
+        image: '../../assets/image/home/motion7.png',
+        name: '小豆丁',
+        price: '2,000',
+        link: '/pages/subject/subject'
+      },
+    ],
+    deadline: Date.now()
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    const _this = this;
+    /* wx.request({
+      url: 'http://localhost:3000/api/home',
+      success(res) {
+        console.log(res);
+        _this.setData({})
+      },
+      fail(err) {
 
+      }
+    }) */
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    const _this = this;
+    setTimeout(function() {
+      _this.setData({deadline: 1590420600000})
+    }, 1000)
   },
 
   /**

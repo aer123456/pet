@@ -1,3 +1,9 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "banner-box": "../../components/banner-box/banner-box",
+    "previews-item": "../../components/previews-item/previews-item"
+  },
+  "navigationStyle": "custom",
+  "navigationBarTitleText": "喵城",
+  "navigationBarTextStyle":"white"
 }

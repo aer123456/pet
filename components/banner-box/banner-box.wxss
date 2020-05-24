@@ -1,0 +1,30 @@
+.banner-box {
+  position: relative;
+  height: 610rpx;
+}
+.banner-box .swipers {
+  height: 100%;
+}
+.banner-box .swipers .swiper-item-images {
+  width: 100%;
+  height: 100%;
+}
+.banner-box .cue-point {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  right: 50%;
+  bottom: 65rpx;
+  transform: translateX(50%);
+}
+.banner-box .cue-point text {
+  margin: 0 10rpx;
+  width: 18rpx;
+  height: 18rpx;
+  border-radius: 9rpx;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+.banner-box .cue-point .mark {
+  background: #ffffff;
+  width: 60rpx;
+}

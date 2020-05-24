@@ -1,0 +1,25 @@
+<!-- 首页banner轮播图 -->
+<view class="banner-box">
+  <swiper
+      class="swipers"
+      bindchange="bindonChange"
+      indicator-dots="{{indicatorDots}}"
+      autoplay="{{autoplay}}"
+      circular="{{circular}}"
+      vertical="{{vertical}}"
+      interval="{{interval}}"
+      duration="{{duration}}"
+      previous-margin="{{previousMargin}}px"
+      next-margin="{{nextMargin}}px">
+    <block wx:for="{{images}}" wx:key="index">
+      <swiper-item>
+        <image src="{{item}}" mode="aspectFill" class="swiper-item-images"/>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="cue-point">
+    <block wx:for="{{images}}" wx:key="index">
+        <text class="{{index==hot?'mark':''}}"></text>
+    </block>
+  </view>
+</view>

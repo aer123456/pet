@@ -1,2 +1,66 @@
-<!--pages/home/home.wxml-->
-<text>pages/home/home.wxml</text>
+<!-- pages/home/home.wxml -->
+<import src="../../template/perfer-list/perfer-list"></import>
+<view class="home-page">
+  <!-- banner 轮播图 -->
+  <banner-box images="{{banners}}"></banner-box>
+  <!-- 精选 & 预告 -->
+  <view class="previews">
+    <previews-item class="previews-item" link="/pages/subject/subject" image="{{previews[0]}}" title="限时推荐" deadline="{{deadline}}"></previews-item>
+    <previews-item class="previews-item" link="/pages/subject/subject" image="{{previews[1]}}" title="明日预告" deadline="{{deadline}}"></previews-item>
+  </view>
+  <!-- 推荐区 -->
+  <view class="prefer-list">
+    <template is="perferListTitle" data="{{titleCn: '新生萌物', titleEn: 'NEWBORN', link: '/pages/subject/subject', count: 4}}"></template>
+    <view class="motion-list1">
+      <block wx:for="{{motions1}}" wx:key="index">
+        <view class="motion-item">
+          <navigator url="{{item.link}}">
+            <image class="motion-image" src="{{item.image}}" lazy-load="{{true}}"></image>
+            <view class="motion-info">
+              <view class="motion-info-title">
+                <text>{{item.name}}</text>
+                <image class="gender-icon" mode="heightFix" src="{{item.gender == 'M' ? '../../assets/image/home/male.png' : '../../assets/image/home/female.png'}}"></image>
+              </view>
+              <view class="motion-info-text">
+                <text>{{item.breed}} / {{item.age}}</text>
+                <image class="arrow-icon" src="../../assets/image/icon/other/arrow.png"></image>
+              </view>
+            </view>
+          </navigator>
+        </view>
+      </block>
+    </view>
+  </view>
+  <view class="prefer-list">
+    <template is="perferListTitle" data="{{titleCn: '为您精选', titleEn: 'FOR YOU', link: '/pages/subject/subject', count: 4}}"></template>
+    <view class="motion-list2">
+      <block wx:for="{{motions2}}" wx:key="index">
+        <view class="motion-item">
+          <navigator url="{{item.link}}">
+            <image class="motion-image" src="{{item.image}}" lazy-load="{{true}}"></image>
+            <view class="motion-info">
+              <view>{{item.name}}</view>
+              <view class="price">¥ {{item.price}}</view>
+            </view>
+          </navigator>
+        </view>
+      </block>
+    </view>
+  </view>
+  <view class="prefer-list">
+    <template is="perferListTitle" data="{{titleCn: '新生萌物', titleEn: 'NEWBORN', link: '/pages/subject/subject', count: 4}}"></template>
+    <view class="motion-list3">
+      <block wx:for="{{motions3}}" wx:key="index">
+        <view class="motion-item">
+          <navigator url="{{item.link}}">
+            <image class="motion-image" src="{{item.image}}" lazy-load="{{true}}"></image>
+            <view class="motion-info">
+              <view>{{item.name}}</view>
+              <view class="price">¥ {{item.price}}</view>
+            </view>
+          </navigator>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>
