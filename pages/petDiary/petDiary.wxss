@@ -96,7 +96,7 @@ page {
 .pet-diary-page .diary-content-wrap .diary-wrap .diary-content {
   padding: 60rpx;
   background: #ffffff;
-  padding-bottom: 250rpx;
+  padding-bottom: 400rpx;
 }
 .pet-diary-page .diary-content-wrap .diary-wrap .diary-content .diary .card {
   display: flex;

@@ -1,9 +1,9 @@
 {
   "pages": [
+    "pages/petDiary/petDiary",
     "pages/home/home",
     "pages/sortList/sortList",
     "pages/petDetail/petDetail",
-    "pages/petDiary/petDiary",
     "pages/orderDetail/orderDetail",
     "pages/subject/subject",
     "pages/my/my",
