@@ -1,12 +1,12 @@
 {
   "pages": [
+    "pages/home/home",
     "pages/sortList/sortList",
     "pages/petDetail/petDetail",
     "pages/petDiary/petDiary",
     "pages/orderDetail/orderDetail",
     "pages/subject/subject",
     "pages/my/my",
-    "pages/home/home",
     "pages/test/test"
   ],
   "window": {

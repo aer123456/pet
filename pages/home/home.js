@@ -1,4 +1,5 @@
 // pages/home/home.js
+import {doRequest} from '../../utils/util';
 Page({
 
   /**
@@ -114,20 +115,14 @@ Page({
    */
   onLoad: function (options) {
     const _this = this;
-    /* wx.request({
-      url: 'http://localhost:3000/api/home',
-      success(res) {
-        console.log(res);
-        _this.setData({})
-      },
-      fail(err) {
-        wx.showToast({
-          title: '网络错误，请稍后重试',
-          icon: 'none',
-          duration: 2000
-        })
-      }
-    }) */
+    const param = {
+      url: 'www.baidu.com',
+      method: 'GET',
+      data: { a: 1}
+    }
+    doRequest(param).then((res) => {
+      console.log(res)
+    })
   },
 
   /**
