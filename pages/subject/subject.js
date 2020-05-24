@@ -5,14 +5,64 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    perferList: [
+      {
+        image: '../../assets/image/home/cat4.png',
+        name: '小豆丁',
+        price: '2,000',
+        link: '/pages/test/test'
+      },
+      {
+        image: '../../assets/image/home/cat3.png',
+        name: '小豆丁',
+        price: '2,000',
+        link: '/pages/test/test'
+      },
+      {
+        image: '../../assets/image/home/cat5.png',
+        name: '小豆丁',
+        price: '2,000',
+        link: '/pages/test/test'
+      },
+      {
+        image: '../../assets/image/home/cat6.png',
+        name: '小豆丁',
+        price: '2,000',
+        link: '/pages/test/test'
+      },
+      {
+        image: '../../assets/image/home/cat5.png',
+        name: '小豆丁',
+        price: '2,000',
+        link: '/pages/test/test'
+      },
+      {
+        image: '../../assets/image/home/cat4.png',
+        name: '小豆丁',
+        price: '2,000',
+        link: '/pages/test/test'
+      },
+      {
+        image: '../../assets/image/home/cat6.png',
+        name: '小豆丁',
+        price: '2,000',
+        link: '/pages/test/test'
+      },
+    ]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    wx.setNavigationBarTitle({
+      title: '新生萌物'
+    });
+    // wx.showToast({
+    //   title: '网络错误，请稍后重试',
+    //   icon: 'none',
+    //   duration: 2000
+    // });
   },
 
   /**

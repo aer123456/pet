@@ -1,2 +1,15 @@
-<!--pages/subject/subject.wxml-->
-<text>pages/subject/subject.wxml</text>
+<!-- pages/subject/subject.wxml -->
+<view class="subject-page">
+  <block wx:for="{{perferList}}" wx:key="index">
+    <view class="perfer-item">
+      <image class="perfer-image" src="{{item.image}}" lazy-load="{{true}}"></image>
+      <view class="perfer-info">
+        <view>{{item.name}}</view>
+        <view class="price">
+          <text>¥ {{item.price}}</text>
+          <navigator class="perfer-action" url="{{item.link}}">购买</navigator>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>

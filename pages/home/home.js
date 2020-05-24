@@ -121,7 +121,11 @@ Page({
         _this.setData({})
       },
       fail(err) {
-
+        wx.showToast({
+          title: '网络错误，请稍后重试',
+          icon: 'none',
+          duration: 2000
+        })
       }
     }) */
   },

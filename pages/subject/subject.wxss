@@ -1,1 +1,48 @@
-/* pages/subject/subject.wxss */
+/* pages/subject/subject */
+.subject-page {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 40rpx;
+}
+.subject-page .perfer-item {
+  margin-bottom: 20rpx;
+  width: 325rpx;
+  height: 471rpx;
+  background-color: #FFF;
+  border-radius: 20rpx;
+  box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.08);
+}
+.subject-page .perfer-image {
+  width: 325rpx;
+  height: 325rpx;
+  border-radius: 20rpx 20rpx 0 0;
+  vertical-align: middle;
+}
+.subject-page .perfer-info {
+  margin: 20rpx;
+  font-size: 28rpx;
+  line-height: 40rpx;
+  color: #424242;
+}
+.subject-page .perfer-info .price {
+  position: relative;
+  margin-top: 14rpx;
+  font-size: 34rpx;
+  line-height: 48rpx;
+  font-weight: bold;
+  color: #F0AF5A;
+}
+.subject-page .perfer-action {
+  position: absolute;
+  top: 3rpx;
+  right: -20rpx;
+  width: 126rpx;
+  height: 42rpx;
+  background: linear-gradient(118deg, #ffdbae 0%, #fdc67f 100%);
+  border-radius: 21rpx 0 0 21rpx;
+  font-size: 28rpx;
+  line-height: 42rpx;
+  text-align: center;
+  color: #FFF;
+}
