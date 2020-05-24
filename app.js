@@ -1,3 +1,10 @@
+/**
+* @file: description
+* @author: huguantao
+* @Date: 2020-05-08 23:10:19
+* @LastEditors: huguantao
+* @LastEditTime: 2020-05-24 17:29:30
+ */
 //app.js
 App({
   onLaunch: function () {
@@ -32,9 +39,19 @@ App({
         }
       }
     })
+
+    wx.getSystemInfo({
+      success: res => {
+        //导航高度
+        this.globalData.navHeight = res.statusBarHeight;
+      }, fail(err) {
+        console.log(err);
+      }
+    })
   },
   globalData: {
     userInfo: null,
-    headerBtnPosi: wx.getMenuButtonBoundingClientRect()
-  }
+    navHeight: 0
+  },
+  
 })

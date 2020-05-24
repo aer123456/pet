@@ -1,0 +1,7 @@
+<view class="global-header-place-holder" style='padding-top:{{navH}}px' wx:if="{{needHolder}}"></view>
+<view class="global-page-header {{border ? 'page-header-bordered' : ''}} {{needHolder ? 'global-page-header-holdered' : ''}}" style='padding-top:{{navH}}px'>
+  <view class="global-page-header-head">
+    <image wx:if="{{goBackIcon}}" bindtap="goBack" src="../../assets/image/icon/other/back.png" />
+    <text>{{text}}</text>
+  </view>
+</view>

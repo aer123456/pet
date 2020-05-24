@@ -1,3 +1,8 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "header": "../../components/header/header"
+  },
+  "navigationStyle": "custom",
+  "navigationBarTitleText": "爱宠日记",
+  "navigationBarTextStyle": "black"
 }

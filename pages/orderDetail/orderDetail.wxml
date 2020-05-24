@@ -1,4 +1,5 @@
 <view class="order-detail-page">
+  <header goBackIcon="{{true}}" text="订单详情" border="{{true}}" needHolder="{{true}}" />
   <view class="wrap">
     <view class="order box-shadow">
       <view class="img">

@@ -1,9 +1,10 @@
 <view class="pet-diary-page">
+  <header goBackIcon="{{true}}" text="{{isEmpty ? '爱宠日记' : ''}}" border="{{isEmpty}}" needHolder="{{false}}" />
   <view class="no-content" wx:if="{{isEmpty}}">
     <image src="../../assets/image/diary/no.png" />
     <view class="no-text">预定成功后就可以看到宝贝的成长记录啦！</view>
   </view>
-  <view class="diary-content-wrap">
+  <view class="diary-content-wrap" wx:if="{{!isEmpty}}">
     <view class="headings">
       <view class="heading">
         <image src="../../assets/image/catHead.png" />

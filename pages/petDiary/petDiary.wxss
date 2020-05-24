@@ -22,7 +22,7 @@ page {
 }
 .pet-diary-page .diary-content-wrap {
   height: 100%;
-  padding-top: 320rpx;
+  padding-top: 480rpx;
   background: linear-gradient(180deg, #fff1df 0%, #ffe5c2 100%);
 }
 .pet-diary-page .diary-content-wrap .headings {
@@ -30,7 +30,7 @@ page {
   height: 160rpx;
   text-align: center;
   overflow-x: scroll;
-  padding: 60rpx 0;
+  padding: 220rpx 0 60rpx;
   position: fixed;
   left: 0;
   top: 0;
@@ -61,7 +61,7 @@ page {
 .pet-diary-page .diary-content-wrap .diary-wrap-outter {
   height: 100%;
   position: fixed;
-  top: 270rpx;
+  top: 430rpx;
   left: 0;
   right: 0;
   overflow-y: scroll;

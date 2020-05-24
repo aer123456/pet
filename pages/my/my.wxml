@@ -1,5 +1,6 @@
 <!--账户页-->
 <view class="my-page">
+  <header goBackIcon="{{true}}" />
   <view class="head">
     <image class="head-img" src='../../assets/image/my/head.png' />
     <view class="head-text">

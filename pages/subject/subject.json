@@ -1,5 +1,8 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "header": "../../components/header/header"
+  },
+  "navigationStyle": "custom",
   "navigationBarTitleText": "",
   "navigationBarTextStyle":"black"
 }

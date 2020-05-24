@@ -1,4 +1,5 @@
 <!-- pages/subject/subject.wxml -->
+<header goBackIcon="{{true}}" text="新生萌物" border="{{true}}" needHolder="{{true}}" />
 <view class="subject-page">
   <block wx:for="{{perferList}}" wx:key="index">
     <view class="perfer-item">

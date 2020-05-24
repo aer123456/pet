@@ -1,5 +1,7 @@
+
 <view class="sort-list-page">
-  <view class="left-nav-wrap">
+  <header goBackIcon="{{true}}" text="宝贝分类" border="{{true}}" needHolder="{{true}}" />
+  <view class="left-nav-wrap" style='padding-top:{{navH + 46}}px' >
     <view class="left-nav">
       <view class="nav-item current-nav">
         <text>人气推荐</text>

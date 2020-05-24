@@ -1,11 +1,20 @@
+/**
+* @file: description
+* @author: huguantao
+* @Date: 2020-05-19 21:02:34
+* @LastEditors: huguantao
+* @LastEditTime: 2020-05-24 21:18:27
+ */
 // pages/sortList/sortList.js
+const App = getApp();
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    navH: App.globalData.navHeight
   },
 
   /**
