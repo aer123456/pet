@@ -18,18 +18,25 @@
       padding: 30rpx 0;
       .nav-item {
         width: 42rpx;
-        margin: 30rpx 0 0 29rpx;
-        padding-bottom: 30rpx;
+        min-height: 120rpx;
+        margin: 30rpx 0 30rpx 29rpx;
         position: relative;
         font-size: 30rpx;
         color:rgba(253,198,127,1);
-        line-height: 32rpx;
+        line-height: 42rpx;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text {
+          writing-mode: horizontal-tb;//默认：水平方向，从上到下 
+        }
         image {
           width: 36rpx;
           height: 82rpx;
           position: absolute;
           left: 56rpx;
-          top: 23rpx;
+          top: 50%;
+          margin-top: -41rpx;
         }
       }
       .current-nav {
@@ -77,6 +84,13 @@
             color:rgba(184,187,188,1);
             line-height: 33rpx;
             text-decoration: line-through;
+          }
+          .card-content-price-content {
+            display: inline-block;
+            max-width: 200rpx;
+            text {
+              display: block;
+            }
           }
           image {
             width:126rpx;

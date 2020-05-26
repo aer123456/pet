@@ -1,8 +1,8 @@
 {
   "pages": [
-    "pages/home/home",
-    "pages/petDiary/petDiary",
     "pages/sortList/sortList",
+    "pages/petDiary/petDiary",
+    "pages/home/home",
     "pages/petDetail/petDetail",
     "pages/orderDetail/orderDetail",
     "pages/subject/subject",

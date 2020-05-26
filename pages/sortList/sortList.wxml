@@ -3,46 +3,36 @@
   <header goBackIcon="{{true}}" text="宝贝分类" border="{{true}}" needHolder="{{true}}" />
   <view class="left-nav-wrap" style='padding-top:{{navH + 46}}px' >
     <view class="left-nav">
-      <view class="nav-item current-nav">
-        <text>人气推荐</text>
-        <image src="http://stc.unipet-group.com/mini/icon/sortList/dot.png" />
-      </view>
-      <view class="nav-item">
-        <text>精挑细选</text>
-        <image src="http://stc.unipet-group.com/mini/icon/sortList/dot.png" />
-      </view>
-      <view class="nav-item">
-        <text>特色萌物</text>
-        <image src="http://stc.unipet-group.com/mini/icon/sortList/dot.png" />
-      </view>
-      <view class="nav-item">
-        <text>调皮捣蛋</text>
-        <image src="http://stc.unipet-group.com/mini/icon/sortList/dot.png" />
-      </view>
-      <view class="nav-item">
-        <text>安静粘人</text>
-        <image src="http://stc.unipet-group.com/mini/icon/sortList/dot.png" />
-      </view>
-      <view class="nav-item">
-        <text>活泼好动</text>
-        <image src="http://stc.unipet-group.com/mini/icon/sortList/dot.png" />
-      </view>
+      <block wx:for="{{sortList}}" wx:key="index">
+        <view class="nav-item {{item.id == currentId ? 'current-nav' : ''}}" 
+          data-id="{{item.id}}" bindtap="switchList">
+          <text>{{item.name}}</text>
+          <image wx:if="{{item.id == currentId}}" src="http://stc.unipet-group.com/mini/icon/sortList/dot.png" />
+        </view>
+      </block>
     </view>
   </view>
   <view class="right-content">
-    <view class="card box-shadow">
-      <image class="card-img" src='http://stc.unipet-group.com/mini/my/cat.png' />
-      <view class="card-content">
-        <view class="card-content-title">小豆丁</view>
-        <view class="card-content-desc">男宝/已打疫苗/蓝色眼睛/活泼 /已绝育</view>
-        <view class="card-content-price">
-          <text class="money">￥2800</text>
-          <text class="discount">￥30000</text>
-          <image src="http://stc.unipet-group.com/mini/icon/sortList/buy.png" />
+    <block wx:for="{{currentList}}" wx:key="index">
+      <view class="card box-shadow" data-id="{{item.id}}" bindtap="gotoBuy">
+        <image class="card-img" src="{{item.cover}}" />
+        <view class="card-content">
+          <view class="card-content-title">{{item.title}}</view>
+          <view class="card-content-desc">
+            <text wx:for="{{item.tags}}" wx:for-item="tag" wx:key="tag">{{tag}} / </text>
+          </view>
+          <view class="card-content-price">
+            <view class="card-content-price-content">
+              <text class="money">￥{{item.price}}</text>
+              <text class="discount">￥{{item.discount_price}}</text>
+            </view>
+            <image src="http://stc.unipet-group.com/mini/icon/sortList/buy.png" />
+          </view>
         </view>
       </view>
-    </view>
-    <view class="card box-shadow">
+    </block>
+    
+    <!-- <view class="card box-shadow">
       <image class="card-img" src='http://stc.unipet-group.com/mini/my/cat.png' />
       <view class="card-content">
         <view class="card-content-title">小豆丁</view>
@@ -53,18 +43,6 @@
           <image src="http://stc.unipet-group.com/mini/icon/sortList/buy.png" />
         </view>
       </view>
-    </view>
-    <view class="card box-shadow">
-      <image class="card-img" src='http://stc.unipet-group.com/mini/my/cat.png' />
-      <view class="card-content">
-        <view class="card-content-title">小豆丁</view>
-        <view class="card-content-desc">男宝/已打疫苗/蓝色眼睛/活泼 /已绝育</view>
-        <view class="card-content-price">
-          <text class="money">￥2800</text>
-          <text class="discount">￥30000</text>
-          <image src="http://stc.unipet-group.com/mini/icon/sortList/buy.png" />
-        </view>
-      </view>
-    </view>
+    </view> -->
   </view>
 </view>

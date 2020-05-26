@@ -22,19 +22,26 @@
 }
 .sort-list-page .left-nav-wrap .left-nav .nav-item {
   width: 42rpx;
-  margin: 30rpx 0 0 29rpx;
-  padding-bottom: 30rpx;
+  min-height: 120rpx;
+  margin: 30rpx 0 30rpx 29rpx;
   position: relative;
   font-size: 30rpx;
   color: #fdc67f;
-  line-height: 32rpx;
+  line-height: 42rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sort-list-page .left-nav-wrap .left-nav .nav-item text {
+  writing-mode: horizontal-tb;
 }
 .sort-list-page .left-nav-wrap .left-nav .nav-item image {
   width: 36rpx;
   height: 82rpx;
   position: absolute;
   left: 56rpx;
-  top: 23rpx;
+  top: 50%;
+  margin-top: -41rpx;
 }
 .sort-list-page .left-nav-wrap .left-nav .current-nav {
   color: #f0af5a;
@@ -83,6 +90,13 @@
   color: #b8bbbc;
   line-height: 33rpx;
   text-decoration: line-through;
+}
+.sort-list-page .right-content .card .card-content .card-content-price .card-content-price-content {
+  display: inline-block;
+  max-width: 200rpx;
+}
+.sort-list-page .right-content .card .card-content .card-content-price .card-content-price-content text {
+  display: block;
 }
 .sort-list-page .right-content .card .card-content .card-content-price image {
   width: 126rpx;
