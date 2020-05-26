@@ -3,7 +3,7 @@
 * @author: huguantao
 * @Date: 2020-05-19 21:02:34
 * @LastEditors: huguantao
-* @LastEditTime: 2020-05-26 23:53:00
+* @LastEditTime: 2020-05-27 00:15:11
  */
 import {doRequest} from '../../utils/util';
 const App = getApp();
@@ -115,6 +115,7 @@ Page({
   },
   gotoBuy: function(event) {
     var id = event.currentTarget.dataset.id;
+    console.log(`/pages/petDetail/petDetail?id=${id}`)
     wx.navigateTo({url: `/pages/petDetail/petDetail?id=${id}`})
   },
 })

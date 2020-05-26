@@ -41,7 +41,7 @@
     <view class="tab1-content" wx:if="{{currentTab == 1}}">
       <view class="title padding-60"><text>Color</text>    毛色</view>
       <view class="color-wrap padding-60">
-        <view wx:for="{{colors[0]}}" wx:for-item="color" class="color-content">
+        <view wx:for="{{colors[0]}}" wx:for-item="color" class="color-content" wx:key="color">
           <view class="img">
             <image class="ig" src="{{color.img}}"  />
             <image wx:if="{{color.desc == '红色'}}" class="bg" src="http://stc.unipet-group.com/mini/icon/petDetail/colors.png"  />
@@ -50,7 +50,7 @@
         </view>
       </view>
       <view class="color-wrap padding-60">
-        <view wx:for="{{colors[1]}}" wx:for-item="color" class="color-content">
+        <view wx:for="{{colors[1]}}" wx:for-item="color" class="color-content" wx:key="color">
           <view class="img">
             <image class="ig" src="{{color.img}}"  />
             <image wx:if="{{color.desc == '红色'}}" class="bg" src="http://stc.unipet-group.com/mini/icon/petDetail/colors.png"  />
@@ -61,7 +61,7 @@
 
       <view class="title padding-60"><text>Color</text>    瞳孔颜色</view>
       <view class="color-wrap eye-wrap padding-60">
-        <view wx:for="{{eyes}}" wx:for-item="eye" class="color-content">
+        <view wx:for="{{eyes}}" wx:for-item="eye" class="color-content" wx:key="eye">
           <view class="img">
             <image class="ig" src="{{eye.img}}"  />
             <image wx:if="{{eye.desc == '绿色'}}" class="bg" src="http://stc.unipet-group.com/mini/icon/petDetail/eyes.png"  />
@@ -72,7 +72,7 @@
 
       <view class="title padding-60"><text>毛质</text></view>
       <view class="tab-items padding-60">
-        <view  wx:for="{{furs}}" wx:for-item="fur" class="{{fur == '无毛' ? 'current' : '' }} tab-item">
+        <view  wx:for="{{furs}}" wx:for-item="fur" wx:key="fur" class="{{fur == '无毛' ? 'current' : '' }} tab-item">
           {{fur}}
           <image wx:if="{{fur == '无毛'}}"  src="http://stc.unipet-group.com/mini/icon/petDetail/select.png" />
         </view>
@@ -80,7 +80,7 @@
 
       <view class="title padding-60"><text>耳朵</text></view>
       <view class="tab-items padding-60">
-        <view wx:for="{{ears}}" wx:for-item="ear" class="{{ear == '卷耳' ? 'current' : '' }} tab-item">
+        <view wx:for="{{ears}}" wx:for-item="ear" wx:key="ear" class="{{ear == '卷耳' ? 'current' : '' }} tab-item">
           {{ear}}
           <image wx:if="{{ear == '卷耳'}}" src="http://stc.unipet-group.com/mini/icon/petDetail/select.png" />
         </view>

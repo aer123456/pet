@@ -3,9 +3,9 @@
 * @author: huguantao
 * @Date: 2020-05-19 21:03:52
 * @LastEditors: huguantao
-* @LastEditTime: 2020-05-23 23:47:26
+* @LastEditTime: 2020-05-27 00:28:55
  */
-// pages/petDetail/petDetail.js
+import {doRequest} from '../../utils/util';
 Page({
 
   /**
@@ -44,14 +44,27 @@ Page({
     visible: false,
     disableInput: true,
     submitPhone: '',
-    currentTab: 1
+    currentTab: 1,
+
+    id: '',
+    catDetail: null
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-
+  onLoad: function (option) {
+    console.log(option.id)
+    this.setData({id: option.id})
+    const param = {
+      url: `/shop/detail?id=${option.id}`,
+      method: 'GET',
+      data: {}
+    }
+    doRequest(param).then((res) => {
+      console.log(res)
+      this.setData({catDetail: res.data.data});
+    });
   },
 
   /**
