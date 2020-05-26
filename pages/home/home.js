@@ -116,7 +116,7 @@ Page({
   onLoad: function (options) {
     const _this = this;
     const param = {
-      url: 'www.baidu.com',
+      url: '/index/index',
       method: 'GET',
       data: { a: 1}
     }

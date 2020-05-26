@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/petDiary/petDiary",
     "pages/home/home",
+    "pages/petDiary/petDiary",
     "pages/sortList/sortList",
     "pages/petDetail/petDetail",
     "pages/orderDetail/orderDetail",
@@ -25,26 +25,26 @@
       {
         "pagePath": "pages/home/home",
         "text": "",
-        "iconPath": "assets/image/nav/1-1.png",
-        "selectedIconPath": "assets/image/nav/1.png"
+        "iconPath": "assets/nav/1-1.png",
+        "selectedIconPath": "assets/nav/1.png"
       },
       {
         "pagePath": "pages/sortList/sortList",
         "text": "",
-        "iconPath": "assets/image/nav/2-1.png",
-        "selectedIconPath": "assets/image/nav/2.png"
+        "iconPath": "assets/nav/2-1.png",
+        "selectedIconPath": "assets/nav/2.png"
       },
       {
         "pagePath": "pages/petDiary/petDiary",
         "text": "",
-        "iconPath": "assets/image/nav/3-1.png",
-        "selectedIconPath": "assets/image/nav/3.png"
+        "iconPath": "assets/nav/3-1.png",
+        "selectedIconPath": "assets/nav/3.png"
       },
       {
         "pagePath": "pages/my/my",
         "text": "",
-        "iconPath": "assets/image/nav/4-1.png",
-        "selectedIconPath": "assets/image/nav/4.png"
+        "iconPath": "assets/nav/4-1.png",
+        "selectedIconPath": "assets/nav/4.png"
       }
     ]
   },

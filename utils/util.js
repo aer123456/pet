@@ -3,19 +3,20 @@
 * @author: huguantao
 * @Date: 2020-05-08 23:10:19
 * @LastEditors: huguantao
-* @LastEditTime: 2020-05-24 21:53:25
+* @LastEditTime: 2020-05-26 22:33:12
  */
+const urlPrefix = 'https://test-api.unipet-group.com';
 const doRequest = (PARAMS, cb) => {
   return new Promise(function(resolve, reject) {
     wx.request({
-      url: PARAMS.url, //仅为示例，并非真实的接口地址
-      data: PARAMS.data,
+      url: urlPrefix + PARAMS.url, //仅为示例，并非真实的接口地址
+      data: PARAMS.data || {},
       method: PARAMS.method,
       header: {
         'content-type': 'application/json' // 默认值
       },
       success (res) {
-        resolve(res)
+        resolve(res.data)
       },
       fail (err) {
         console.log(err)
