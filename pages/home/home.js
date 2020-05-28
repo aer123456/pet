@@ -1,5 +1,5 @@
 // pages/home/home.js
-import {doRequest} from '../../utils/util';
+import {doRequest, showToast} from '../../utils/util';
 Page({
 
   /**
@@ -113,16 +113,25 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-    const _this = this;
+  onLoad: async function (options) {
     const param = {
       url: '/index/index',
       method: 'GET',
       data: { a: 1}
     }
-    doRequest(param).then((res) => {
-      console.log(res)
-    })
+    let res;
+    try {
+      res = await doRequest(param);
+    } catch (error) {
+      showToast(error && error.msg || error || '网络错误');
+      return;
+    }
+    const { code, msg, data } = res || {};
+    if (code !== 0) {
+      showToast(msg || '网络错误');
+      return;
+    }
+    // 正常业务处理
   },
 
   /**
