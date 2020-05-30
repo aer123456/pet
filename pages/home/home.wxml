@@ -5,24 +5,24 @@
   <banner-box images="{{banners}}"></banner-box>
   <!-- 精选 & 预告 -->
   <view class="previews">
-    <previews-item class="previews-item" link="/pages/subject/subject" image="{{previews[0]}}" title="限时推荐" deadline="{{deadline}}"></previews-item>
-    <previews-item class="previews-item" link="/pages/subject/subject" image="{{previews[1]}}" title="明日预告" deadline="{{deadline}}"></previews-item>
+    <previews-item class="previews-item" link="/pages/petDetail/petDetail?id={{previews[0].target}}" image="{{previews[0].img}}" title="{{previews[0].title}}" deadline="{{previews[0].time + '000'}}"></previews-item>
+    <previews-item class="previews-item" link="/pages/petDetail/petDetail?id={{previews[1].target}}" image="{{previews[1].img}}" title="{{previews[1].title}}" deadline="{{previews[1].time + '000'}}"></previews-item>
   </view>
   <!-- 推荐区 -->
   <view class="prefer-list">
-    <template is="perferListTitle" data="{{titleCn: '新生萌物', titleEn: 'NEWBORN', link: '/pages/subject/subject', count: 4}}"></template>
+    <template is="perferListTitle" data="{{titleCn: motions1.title, titleEn: motions1.en_title, link: '/pages/subject/subject?keyword=', keyword: motions1.keyword, count: 4}}"></template>
     <view class="motion-list1">
-      <block wx:for="{{motions1}}" wx:key="index">
+      <block wx:for="{{motions1.list}}" wx:key="index">
         <view class="motion-item">
-          <navigator url="{{item.link}}">
-            <image class="motion-image" src="{{item.image}}" lazy-load="{{true}}"></image>
+          <navigator url="/pages/petDetail/petDetail?id={{item.target}}">
+            <image class="motion-image" src="{{item.url}}" lazy-load="{{true}}"></image>
             <view class="motion-info">
               <view class="motion-info-title">
-                <text>{{item.name}}</text>
+                <text>{{item.title}}</text>
                 <image class="gender-icon" mode="heightFix" src="{{item.gender == 'M' ? 'http://stc.unipet-group.com/mini/home/male.png' : 'http://stc.unipet-group.com/mini/home/female.png'}}"></image>
               </view>
               <view class="motion-info-text">
-                <text>{{item.breed}} / {{item.age}}</text>
+                <text>{{item.tags}}</text>
                 <image class="arrow-icon" src="http://stc.unipet-group.com/mini/icon/other/arrow.png"></image>
               </view>
             </view>
@@ -32,14 +32,14 @@
     </view>
   </view>
   <view class="prefer-list">
-    <template is="perferListTitle" data="{{titleCn: '为您精选', titleEn: 'FOR YOU', link: '/pages/subject/subject', count: 4}}"></template>
+    <template is="perferListTitle" data="{{titleCn: motions2.title, titleEn: motions2.en_title, link: '/pages/subject/subject?keyword=', keyword: motions2.keyword, count: 4}}"></template>
     <view class="motion-list2">
-      <block wx:for="{{motions2}}" wx:key="index">
+      <block wx:for="{{motions2.list}}" wx:key="index">
         <view class="motion-item">
-          <navigator url="{{item.link}}">
-            <image class="motion-image" src="{{item.image}}" lazy-load="{{true}}"></image>
+          <navigator url="/pages/petDetail/petDetail?id={{item.target}}">
+            <image class="motion-image" src="{{item.url}}" lazy-load="{{true}}"></image>
             <view class="motion-info">
-              <view>{{item.name}}</view>
+              <view>{{item.title}}</view>
               <view class="price">¥ {{item.price}}</view>
             </view>
           </navigator>
@@ -48,12 +48,12 @@
     </view>
   </view>
   <view class="prefer-list">
-    <template is="perferListTitle" data="{{titleCn: '新生萌物', titleEn: 'NEWBORN', link: '/pages/subject/subject', count: 4}}"></template>
+    <template is="perferListTitle" data="{{titleCn: motions3.title, titleEn: motions3.en_title, link: '/pages/subject/subject?keyword=', keyword: motions3.keyword, count: 4}}"></template>
     <view class="motion-list3">
-      <block wx:for="{{motions3}}" wx:key="index">
+      <block wx:for="{{motions3.list}}" wx:key="index">
         <view class="motion-item">
-          <navigator url="{{item.link}}">
-            <image class="motion-image" src="{{item.image}}" lazy-load="{{true}}"></image>
+          <navigator url="/pages/petDetail/petDetail?id={{item.target}}">
+            <image class="motion-image" src="{{item.url}}" lazy-load="{{true}}"></image>
             <view class="motion-info">
               <view>{{item.name}}</view>
               <view class="price">¥ {{item.price}}</view>

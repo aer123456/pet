@@ -1,3 +1,10 @@
+/**
+* @file: description
+* @author: huguantao
+* @Date: 2020-05-19 21:03:07
+* @LastEditors: huguantao
+* @LastEditTime: 2020-05-30 00:44:00
+ */
 // pages/orderDetail/orderDetail.js
 Page({
 
@@ -12,7 +19,8 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    console.log(options.id);
+    // TODO 获取订单详情
   },
 
   /**

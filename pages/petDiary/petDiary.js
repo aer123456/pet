@@ -3,23 +3,46 @@
 * @author: huguantao
 * @Date: 2020-05-19 21:03:33
 * @LastEditors: huguantao
-* @LastEditTime: 2020-05-24 21:24:56
+* @LastEditTime: 2020-05-28 00:07:21
  */
-// pages/petDiary/petDiary.js
+import {doRequest} from '../../utils/util';
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    isEmpty: false
+    isEmpty: true,
+    currentId: '',
+    currentPet: {},
+    petList: [],
+    diaryList: []
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    const _this = this;
+    const param = {
+      url: '/miniMember/myPet',
+      method: 'GET',
+      data: { }
+    }
+    doRequest(param).then((res) => {
+      this.setData({
+        petList: res.data.list
+      });
+      if(res.data.list.length > 0) {
+        this.setData({
+          isEmpty: false,
+          currentId: res.data.list[0].sid,
+          currentPet: res.data.list[0]
+        });
+        this.getDiary(res.data.list[0].sid);
+      }
+    })
+    
   },
 
   /**
@@ -69,5 +92,33 @@ Page({
    */
   onShareAppMessage: function () {
 
-  }
+  },
+  getDiary: function(id) {
+    const param = {
+      url: `/shop/daily?sid=${id}`,
+      method: 'GET',
+      data: { }
+    }
+    doRequest(param).then((res) => {
+      const list = res.data.list.reverse()
+      this.setData({
+        diaryList: list
+      });
+    })
+  },
+  switchPet: function(event) {
+    var sid = event.currentTarget.dataset.sid;
+    let current = null;
+    for(let i=0; i<this.data.petList.length; i++) {
+      if(this.data.petList[i].sid == sid) {
+        current = this.data.petList[i];
+      }
+    }
+
+    this.setData({
+      currentId: sid,
+      currentPet: current
+    });
+    this.getDiary(sid);
+  },
 })

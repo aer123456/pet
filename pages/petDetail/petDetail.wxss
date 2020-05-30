@@ -1,15 +1,40 @@
 .pet-detail-page {
   padding-bottom: 110rpx;
+  background: #000;
 }
 .pet-detail-page .pet-detail-banner {
   width: 100%;
   height: 500rpx;
-  background: orange;
+  position: relative;
+}
+.pet-detail-page .pet-detail-banner swiper {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.pet-detail-page .pet-detail-banner swiper image,
+.pet-detail-page .pet-detail-banner swiper video {
+  width: 100%!important;
+  height: 100%!important;
+}
+.pet-detail-page .pet-detail-banner .banner-counts {
+  position: absolute;
+  right: 40rpx;
+  bottom: 60rpx;
+  height: 72rpx;
+  line-height: 72rpx;
+  border-radius: 36rpx;
+  padding: 0 30rpx;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 .pet-detail-page .pet-detail-content-wrap {
   background-color: #fff;
   border-radius: 40rpx 40rpx 0px 0px;
-  margin-top: -40rpx;
+  margin-top: -20rpx;
+  z-index: 999;
+  position: relative;
 }
 .pet-detail-page .pet-detail-content-wrap .view1 {
   padding: 30rpx 60rpx;
@@ -242,6 +267,7 @@
   left: 0;
   right: 0;
   background: #ffffff;
+  z-index: 1000;
 }
 .pet-detail-page .pay-buttons .chat-wrap {
   width: 110rpx;

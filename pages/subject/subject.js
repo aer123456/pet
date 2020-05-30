@@ -1,4 +1,6 @@
 // pages/subject/subject.js
+import {doRequest} from '../../utils/util';
+
 Page({
 
   /**
@@ -56,7 +58,19 @@ Page({
    */
   onLoad: function (options) {
     wx.setNavigationBarTitle({
-      title: '新生萌物'
+      title:options.title
+    });
+    this.setData({
+      id: options.id,
+      pageTitle: decodeURIComponent(options.title)
+    })
+    const param = {
+     url: `/index/subjectList?keyword=${options.keyword}`,
+      method: 'GET',
+      data: {}
+    }
+    doRequest(param).then((res) => {
+      this.setData({perferList: res.data.list});
     });
     // wx.showToast({
     //   title: '网络错误，请稍后重试',

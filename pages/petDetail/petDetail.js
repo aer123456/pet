@@ -3,7 +3,7 @@
 * @author: huguantao
 * @Date: 2020-05-19 21:03:52
 * @LastEditors: huguantao
-* @LastEditTime: 2020-05-27 00:28:55
+* @LastEditTime: 2020-05-30 00:22:52
  */
 import {doRequest} from '../../utils/util';
 Page({
@@ -47,23 +47,31 @@ Page({
     currentTab: 1,
 
     id: '',
-    catDetail: null
+    catDetail: null,
+    bannerCounts: 0,   // banner总条数
+    bannerCount: 1,     // 当前banner在第几条
+    bannerImgs: [],
+    bannerVideos: []
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (option) {
-    console.log(option.id)
     this.setData({id: option.id})
     const param = {
-      url: `/shop/detail?id=${option.id}`,
+     url: `/shop/detail?id=${option.id}`,
       method: 'GET',
       data: {}
     }
     doRequest(param).then((res) => {
       console.log(res)
-      this.setData({catDetail: res.data.data});
+      this.setData({
+        catDetail: res.data,
+        bannerCounts: res.data.imgs.length + res.data.videos.length,
+        bannerImgs: res.data.imgs,
+        bannerVideos: res.data.videos
+      });
     });
   },
 
@@ -127,6 +135,11 @@ Page({
   closeModal: function() {
     this.setData({visible: false})
   },
+  switchBanner: function(event) {
+    this.setData({
+      bannerCount: event.detail.current + 1
+    })
+  },
   inputPhone: function(event) {
     this.setData({submitPhone: event.detail.value});
     var phoneReg = /^[1][3,4,5,7,8][0-9]{9}$/;
@@ -138,5 +151,72 @@ Page({
   },
   submit: function() {
     // TODO: 提交
+    wx.login({
+      success (res) {
+        if (res.code) {
+          //发起网络请求
+          const param = {
+            url: `/miniMember/wxlogin`,
+             method: 'post',
+             data: {code: res.code}
+           }
+           doRequest(param).then((res) => {
+            const param = {
+              url: `/order/applyPay`,
+               method: 'post',
+               data: {token: res.data.token, sid: 17, phone: 13552235032}
+             }
+             doRequest(param).then((res) => {
+               var prepay_id = 'prepay_id'+res.data.prepay_id
+               console.log(prepay_id);
+
+                wx.requestPayment({
+                  nonceStr: res.data.nonceStr,
+                  package: res.data.package,
+                  paySign: res.data.paySign,
+                  timeStamp: res.data.timestamp,
+                  signType: res.data.signType,
+                  success (res) {
+                    console.log('支付成功')
+                    console.log(res)
+                   },
+                  fail (res) {
+                    console.log(res)
+                   }
+                })
+             })
+           });
+          
+        } else {
+          console.log('登录失败！' + res.errMsg)
+        }
+      }
+    })
+  },
+  videometa:function (e) {
+    var that = this;
+    //获取系统信息
+    wx.getSystemInfo({
+      success (res) {
+        //视频的高
+        var height = e.detail.height;
+        
+        //视频的宽
+        var width = e.detail.width;
+ 
+        //算出视频的比例
+        var proportion = height / width;
+ 
+        //res.windowWidth为手机屏幕的宽。
+        var windowWidth = res.windowWidth;
+ 
+        //算出当前宽度下高度的数值
+        height = proportion * windowWidth;
+        that.setData({
+          height,
+          width:windowWidth
+        });
+      }
+    })
   }
 })

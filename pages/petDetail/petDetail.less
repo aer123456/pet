@@ -1,15 +1,39 @@
 // out: petDetail.wxss
 .pet-detail-page {
   padding-bottom: 110rpx;
+  background: #000;
   .pet-detail-banner {
     width: 100%;
     height: 500rpx;
-    background: orange;
+    position: relative;
+    swiper {
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      image, video {
+        width: 100%!important;
+        height: 100%!important;
+      }
+    }
+    .banner-counts {
+      position: absolute;
+      right: 40rpx;
+      bottom: 60rpx;
+      height: 72rpx;
+      line-height: 72rpx;
+      border-radius: 36rpx;
+      padding: 0 30rpx;
+      color: #ffffff;
+      background:rgba(0,0,0,0.1);
+      text-align: center;
+    }
   }
   .pet-detail-content-wrap {
     background-color: #fff;
     border-radius: 40rpx 40rpx 0px 0px;
-    margin-top: -40rpx;
+    margin-top: -20rpx;
+    z-index: 999;
+    position: relative;
     .view1 {
       padding: 30rpx 60rpx;
       .title {
@@ -246,6 +270,7 @@
     left: 0;
     right: 0;
     background: #ffffff;
+    z-index: 1000;
     .chat-wrap {
       width: 110rpx;
       height: 110rpx;

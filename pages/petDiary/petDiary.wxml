@@ -6,175 +6,58 @@
   </view>
   <view class="diary-content-wrap" wx:if="{{!isEmpty}}">
     <view class="headings">
-      <view class="heading">
-        <image src="http://stc.unipet-group.com/mini/catHead.png" />
-        <view class="name">尼古拉斯</view>
-      </view>
-      <view class="heading current">
-        <image src="http://stc.unipet-group.com/mini/catHead.png" />
-        <view class="name">尼古拉斯</view>
-      </view>
-      <view class="heading">
-        <image src="http://stc.unipet-group.com/mini/catHead.png" />
-        <view class="name">尼古拉斯</view>
-      </view>
-      <view class="heading">
-        <image src="http://stc.unipet-group.com/mini/catHead.png" />
-        <view class="name">尼古拉斯</view>
-      </view>
+      <block wx:for="{{petList}}" wx:key="index">
+        <view class="heading {{currentId == item.sid ? 'current' : ''}}" data-sid="{{item.sid}}" bindtap="switchPet">
+          <image src="{{item.cover}}" />
+          <view class="name">{{item.title}}</view>
+        </view>
+      </block>
     </view>
 
     <view class="diary-wrap-outter">
       <view class="diary-wrap">
         <view class="heads">
-          <image class="head" src="http://stc.unipet-group.com/mini/my/cat.png" />
-          <view class="name">尼古拉斯
-            <image src="http://stc.unipet-group.com/mini/my/sex1.png" />
+          <image class="head" src="{{currentPet.cover}}" />
+          <view class="name">{{currentPet.title}}
+            <image wx:if="{{currentPet.gender != 1}}" src="http://stc.unipet-group.com/mini/my/sex1.png" />
+            <image wx:if="{{currentPet.gender == 1}}" src="http://stc.unipet-group.com/mini/my/sex2.png" />
           </view>
         </view>
         <view class="diary-content">
           <view class="diary">
-
-            <view class="card">
-              <view class="line" />
-              <view class="day">
-                <view>06</view>
-                <view class="month">五月</view>
-              </view>
-              <view class="event box-shadow">
-                <view class="time">
-                  <image src="http://stc.unipet-group.com/mini/icon/diary/worm.png" />
-                  <text>    3M</text>
+            
+            <block wx:for="{{diaryList}}" wx:key="index">
+              <view class="card">
+                <view class="line {{item.is_finish == 2 ? 'line-gray' : ''}}" wx:if="{{index < diaryList.length - 1}}"/>
+                <view class="day">
+                  <view>{{item.day}}</view>
+                  <view class="month">{{item.month}}</view>
                 </view>
-                <view class="descs">
-                  <view class="desc">第一次洗澡</view>
-                  <view class="desc">第一次睡觉</view>
+                <view class="event box-shadow {{index == diaryList.length - 1 ? 'birth-card' : ''}}">
+                  <view class="time">
+                    <block wx:if="{{item.is_finish == 2}}" wx:for="{{item.type}}" wx:key="index" wx:for-item="event">
+                      <image wx:if="{{event == 1}}" src="http://stc.unipet-group.com/mini/icon/diary/1-no.png" />
+                      <image wx:if="{{event == 2}}" src="http://stc.unipet-group.com/mini/icon/diary/2-no.png" />
+                      <image wx:if="{{event == 3}}" src="http://stc.unipet-group.com/mini/icon/diary/3-no.png" />
+                      <image wx:if="{{event == 4}}" src="http://stc.unipet-group.com/mini/icon/diary/4-no.png" />
+                    </block>
+                    <block wx:if="{{item.is_finish != 2}}" wx:for="{{item.type}}" wx:key="index" wx:for-item="event">
+                      <image wx:if="{{event == 1}}" src="http://stc.unipet-group.com/mini/icon/diary/1-done.png" />
+                      <image wx:if="{{event == 2}}" src="http://stc.unipet-group.com/mini/icon/diary/2-done.png" />
+                      <image wx:if="{{event == 3}}" src="http://stc.unipet-group.com/mini/icon/diary/3-done.png" />
+                      <image wx:if="{{event == 4}}" src="http://stc.unipet-group.com/mini/icon/diary/4-done.png" />
+                    </block>
+                    <text>    {{item.title}}</text>
+                  </view>
+                  <view class="descs">
+                    <view class="desc">{{item.name}}</view>
+                  </view>
+                  <image class="doing" wx:if="{{item.is_finish == 0}}" src="http://stc.unipet-group.com/mini/icon/diary/nodo.png" />
+                  <image class="doing" wx:if="{{item.is_finish == 1}}" src="http://stc.unipet-group.com/mini/icon/diary/done.png" />
+                  <image class="doing" wx:if="{{item.is_finish == 2}}" src="http://stc.unipet-group.com/mini/icon/diary/todo.png" />
                 </view>
-                <image class="doing" src="http://stc.unipet-group.com/mini/icon/diary/todo.png" />
               </view>
-            </view>
-
-            <view class="card">
-              <view class="line" />
-              <view class="day done">
-                <view>06</view>
-                <view class="month">十一月</view>
-              </view>
-              <view class="event box-shadow">
-                <view class="time">
-                  <image src="http://stc.unipet-group.com/mini/icon/diary/worm.png" />
-                  <text>    3M</text>
-                </view>
-                <view class="descs">
-                  <view class="desc">第一次洗澡</view>
-                  <view class="desc">第一次睡觉</view>
-                </view>
-                <image class="doing" src="http://stc.unipet-group.com/mini/icon/diary/todo.png" />
-              </view>
-            </view>
-
-            <view class="card">
-              <view class="day">
-                <view>06</view>
-                <view class="month">五月</view>
-              </view>
-              <view class="event box-shadow">
-                <view class="time">
-                  <image src="http://stc.unipet-group.com/mini/icon/diary/worm.png" />
-                  <text>    3M</text>
-                </view>
-                <view class="descs">
-                  <view class="desc">第一次洗澡</view>
-                </view>
-                <image class="doing" src="http://stc.unipet-group.com/mini/icon/diary/todo.png" />
-              </view>
-            </view>
-
-            <view class="card">
-              <view class="day">
-                <view>06</view>
-                <view class="month">五月</view>
-              </view>
-              <view class="event box-shadow">
-                <view class="time">
-                  <image src="http://stc.unipet-group.com/mini/icon/diary/worm.png" />
-                  <text>    3M</text>
-                </view>
-                <view class="descs">
-                  <view class="desc">第一次洗澡</view>
-                </view>
-                <image class="doing" src="http://stc.unipet-group.com/mini/icon/diary/todo.png" />
-              </view>
-            </view>
-
-            <view class="card">
-              <view class="day">
-                <view>06</view>
-                <view class="month">五月</view>
-              </view>
-              <view class="event box-shadow">
-                <view class="time">
-                  <image src="http://stc.unipet-group.com/mini/icon/diary/worm.png" />
-                  <text>    3M</text>
-                </view>
-                <view class="descs">
-                  <view class="desc">第一次洗澡</view>
-                </view>
-                <image class="doing" src="http://stc.unipet-group.com/mini/icon/diary/todo.png" />
-              </view>
-            </view>
-
-            <view class="card">
-              <view class="day">
-                <view>06</view>
-                <view class="month">五月</view>
-              </view>
-              <view class="event box-shadow">
-                <view class="time">
-                  <image src="http://stc.unipet-group.com/mini/icon/diary/worm.png" />
-                  <text>    3M</text>
-                </view>
-                <view class="descs">
-                  <view class="desc">第一次洗澡</view>
-                </view>
-                <image class="doing" src="http://stc.unipet-group.com/mini/icon/diary/todo.png" />
-              </view>
-            </view>
-
-            <view class="card">
-              <view class="day">
-                <view>07</view>
-                <view class="month">五月</view>
-              </view>
-              <view class="event box-shadow">
-                <view class="time">
-                  <image src="http://stc.unipet-group.com/mini/icon/diary/worm.png" />
-                  <text>    3M</text>
-                </view>
-                <view class="descs">
-                  <view class="desc">第一次洗澡</view>
-                </view>
-                <image class="doing" src="http://stc.unipet-group.com/mini/icon/diary/todo.png" />
-              </view>
-            </view>
-
-            <view class="card">
-              <view class="day">
-                <view>08</view>
-                <view class="month">五月</view>
-              </view>
-              <view class="event box-shadow">
-                <view class="time">
-                  <image src="http://stc.unipet-group.com/mini/icon/diary/worm.png" />
-                  <text>    3M</text>
-                </view>
-                <view class="descs">
-                  <view class="desc">第一次洗澡</view>
-                </view>
-                <image class="doing" src="http://stc.unipet-group.com/mini/icon/diary/todo.png" />
-              </view>
-            </view>
-
+            </block>
           </view>
         </view>
       </view>

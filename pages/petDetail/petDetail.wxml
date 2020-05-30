@@ -1,27 +1,40 @@
 <view class="pet-detail-page">
-  <header goBackIcon="{{true}}" text="小豆丁" border="{{false}}" needHolder="{{false}}" />
+  <header goBackIcon="{{true}}" text="{{catDetail.title}}" border="{{false}}" needHolder="{{false}}" />
   <view class="pet-detail-banner">
-
+    <swiper bindchange="switchBanner" indicator-dots="{{false}}">
+      <block wx:for="{{bannerVideos}}" wx:key="*this">
+        <swiper-item>
+          <video class="swiper-item" src="{{item}}" style="height:{{height}}px; width:{{width}}px;" 
+            bindloadedmetadata="videometa"></video>
+        </swiper-item>
+      </block>
+      <block wx:for="{{bannerImgs}}" wx:key="*this">
+        <swiper-item>
+          <image class="swiper-item" src="{{item}}"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class="banner-counts">{{bannerCount}}/{{bannerCounts}}</view>
   </view>
   <view class="pet-detail-content-wrap">
     <view class="view1">
       <view class="title">
-        <text>小豆丁</text>
-        <image src="http://stc.unipet-group.com/mini/my/sex1.png" />
+        <text>{{catDetail.title}}</text>
+        {{catDetail.gender}}<image  src="http://stc.unipet-group.com/mini/my/sex2.png" />
       </view>
       <view class="birth">
         <image src="http://stc.unipet-group.com/mini/icon/petDetail/birth.png" />
-        <text >猫咪生日：2020.5.1</text>
+        <text >猫咪生日：{{catDetail.birthday}}</text>
       </view>
-      <view class="other">洗澡/洗澡容器/盆</view>
+      <view class="other">{{catDetail.category_name}}</view>
       <view class="marks">
-        <text>商品标签</text>
-        <text>商品标签</text>
-        <text>商品标签</text>
+        <block wx:for="{{catDetail.tags}}" wx:key="block"> 
+        <text>{{item}}</text>
+        </block>
       </view>
       <view class="price">
-        <text>￥3,500</text>
-        <text class="discount">￥4,500</text>
+        <text>￥ {{catDetail.discount_price}}</text>
+        <text class="discount">￥ {{catDetail.price}}</text>
       </view>
     </view>
     <view class="activity">
@@ -29,7 +42,7 @@
     </view>
     <view class="address">
       <image src="http://stc.unipet-group.com/mini/icon/petDetail/addr.png" />
-      所属门店仓库：证大大拇指店
+      所属门店仓库：{{catDetail.store}}
     </view>
     <view class="tabs">
       <view class="tab {{ currentTab == 1 ? 'current' : ''}}" data-index="{{1}}" bindtap="switchTab">喵喵详情</view>
@@ -44,7 +57,7 @@
         <view wx:for="{{colors[0]}}" wx:for-item="color" class="color-content" wx:key="color">
           <view class="img">
             <image class="ig" src="{{color.img}}"  />
-            <image wx:if="{{color.desc == '红色'}}" class="bg" src="http://stc.unipet-group.com/mini/icon/petDetail/colors.png"  />
+            <image wx:if="{{color.desc == catDetail.hair_color }}" class="bg" src="http://stc.unipet-group.com/mini/icon/petDetail/colors.png"  />
           </view>
           <text>{{color.desc}}</text>
         </view>
@@ -53,7 +66,7 @@
         <view wx:for="{{colors[1]}}" wx:for-item="color" class="color-content" wx:key="color">
           <view class="img">
             <image class="ig" src="{{color.img}}"  />
-            <image wx:if="{{color.desc == '红色'}}" class="bg" src="http://stc.unipet-group.com/mini/icon/petDetail/colors.png"  />
+            <image wx:if="{{color.desc == catDetail.hair_color }}" class="bg" src="http://stc.unipet-group.com/mini/icon/petDetail/colors.png"  />
           </view>
           <text>{{color.desc}}</text>
         </view>
@@ -64,7 +77,7 @@
         <view wx:for="{{eyes}}" wx:for-item="eye" class="color-content" wx:key="eye">
           <view class="img">
             <image class="ig" src="{{eye.img}}"  />
-            <image wx:if="{{eye.desc == '绿色'}}" class="bg" src="http://stc.unipet-group.com/mini/icon/petDetail/eyes.png"  />
+            <image wx:if="{{eye.desc == catDetail.eye_color }}" class="bg" src="http://stc.unipet-group.com/mini/icon/petDetail/eyes.png"  />
           </view>
           <text>{{eye.desc}}</text>
         </view>
@@ -72,37 +85,37 @@
 
       <view class="title padding-60"><text>毛质</text></view>
       <view class="tab-items padding-60">
-        <view  wx:for="{{furs}}" wx:for-item="fur" wx:key="fur" class="{{fur == '无毛' ? 'current' : '' }} tab-item">
+        <view  wx:for="{{furs}}" wx:for-item="fur" wx:key="fur" class="{{fur ==  catDetail.hair_quality ? 'current' : '' }} tab-item">
           {{fur}}
-          <image wx:if="{{fur == '无毛'}}"  src="http://stc.unipet-group.com/mini/icon/petDetail/select.png" />
+          <image wx:if="{{fur == catDetail.hair_quality}}"  src="http://stc.unipet-group.com/mini/icon/petDetail/select.png" />
         </view>
       </view>
 
       <view class="title padding-60"><text>耳朵</text></view>
       <view class="tab-items padding-60">
-        <view wx:for="{{ears}}" wx:for-item="ear" wx:key="ear" class="{{ear == '卷耳' ? 'current' : '' }} tab-item">
+        <view wx:for="{{ears}}" wx:for-item="ear" wx:key="ear" class="{{ear == catDetail.ears ? 'current' : '' }} tab-item">
           {{ear}}
-          <image wx:if="{{ear == '卷耳'}}" src="http://stc.unipet-group.com/mini/icon/petDetail/select.png" />
+          <image wx:if="{{ear == catDetail.ears }}" src="http://stc.unipet-group.com/mini/icon/petDetail/select.png" />
         </view>
       </view>
 
       <view class="title padding-60"><text>疫苗信息</text></view>
       <view class="font-descs padding-60">
-        <text>2020年5月1日，疫苗（辉瑞妙三多猫三联）。体内外驱虫（博莱恩）。</text>
+        <text>{{catDetail.vaccine_info}}</text>
       </view>
       <view class="title padding-60"><text>驱虫信息</text></view>
       <view class="font-descs padding-60">
-        <text>2020年4月16日，体内外驱虫（博莱恩）。</text>
+        <text>{{catDetail.del_insect_info}}</text>
       </view>
-      <view class="title padding-60"><text>是否绝育</text><text class="right">未绝育</text></view>
+      <view class="title padding-60">
+      <text>是否绝育</text>
+      <text  class="right">{{catDetail.is_sterilization_info}}</text>
+      </view>
       <view class="gap" />
 
       <view class="title padding-60"><text>Cat</text>      喵喵简介</view>
       <view class="font-descs padding-60">
-        <text class="intro">短毛血统，生性活泼好动，吃饭香，喜欢让人抱摸头等，会撒娇卖萌与人较为亲近，长毛血统，生性活泼好动，吃饭香，喜欢让人抱，会撒娇卖萌与人较为亲近。</text>
-        <image class="intro" src="http://stc.unipet-group.com/mini/catImg.png" mode="widthFix" />
-        <text class="intro">短毛血统，生性活泼好动，吃饭香，喜欢让人抱摸头等，会撒娇卖萌与人较为亲近，长毛血统，生性活泼好动，吃饭香，喜欢让人抱，会撒娇卖萌与人较为亲近。</text>
-        <image class="intro" src="http://stc.unipet-group.com/mini/catImg.png" mode="widthFix" />
+       <rich-text nodes="{{catDetail.details}}"></rich-text>
       </view>
 
     </view>
@@ -110,30 +123,21 @@
     <view class="tab1-content" wx:if="{{currentTab == 2}}">
       <view class="title padding-60"><text>Cat</text>      品种分析</view>
       <view class="font-descs padding-60">
-        <text class="intro">短毛血统，生性活泼好动，吃饭香，喜欢让人抱摸头等，会撒娇卖萌与人较为亲近，长毛血统，生性活泼好动，吃饭香，喜欢让人抱，会撒娇卖萌与人较为亲近。</text>
-        <image class="intro" src="http://stc.unipet-group.com/mini/catImg.png" mode="widthFix" />
-        <text class="intro">短毛血统，生性活泼好动，吃饭香，喜欢让人抱摸头等，会撒娇卖萌与人较为亲近，长毛血统，生性活泼好动，吃饭香，喜欢让人抱，会撒娇卖萌与人较为亲近。</text>
-        <image class="intro" src="http://stc.unipet-group.com/mini/catImg.png" mode="widthFix" />
+      <rich-text nodes="{{catDetail.varieties}}"></rich-text>
       </view>
     </view>
 
     <view class="tab1-content" wx:if="{{currentTab == 3}}">
       <view class="title padding-60"><text>Cat</text>      购买流程</view>
       <view class="font-descs padding-60">
-        <text class="intro">短毛血统，生性活泼好动，吃饭香，喜欢让人抱摸头等，会撒娇卖萌与人较为亲近，长毛血统，生性活泼好动，吃饭香，喜欢让人抱，会撒娇卖萌与人较为亲近。</text>
-        <image class="intro" src="http://stc.unipet-group.com/mini/catImg.png" mode="widthFix" />
-        <text class="intro">短毛血统，生性活泼好动，吃饭香，喜欢让人抱摸头等，会撒娇卖萌与人较为亲近，长毛血统，生性活泼好动，吃饭香，喜欢让人抱，会撒娇卖萌与人较为亲近。</text>
-        <image class="intro" src="http://stc.unipet-group.com/mini/catImg.png" mode="widthFix" />
+        <rich-text nodes="{{catDetail.buy_process}}"></rich-text>
       </view>
     </view>
 
     <view class="tab1-content" wx:if="{{currentTab == 4}}">
       <view class="title padding-60"><text>Cat</text>      售后服务</view>
       <view class="font-descs padding-60">
-        <text class="intro">短毛血统，生性活泼好动，吃饭香，喜欢让人抱摸头等，会撒娇卖萌与人较为亲近，长毛血统，生性活泼好动，吃饭香，喜欢让人抱，会撒娇卖萌与人较为亲近。</text>
-        <image class="intro" src="http://stc.unipet-group.com/mini/catImg.png" mode="widthFix" />
-        <text class="intro">短毛血统，生性活泼好动，吃饭香，喜欢让人抱摸头等，会撒娇卖萌与人较为亲近，长毛血统，生性活泼好动，吃饭香，喜欢让人抱，会撒娇卖萌与人较为亲近。</text>
-        <image class="intro" src="http://stc.unipet-group.com/mini/catImg.png" mode="widthFix" />
+               <rich-text nodes="{{catDetail.sell_service}}"></rich-text>
       </view>
     </view>
   </view>
@@ -143,7 +147,7 @@
       <image class="chat" src="http://stc.unipet-group.com/mini/icon/petDetail/serv.png" />
     </view>
     <view class="pay-button" bindtap="showModal">
-      预付定金：￥1,900
+      预付定金：￥  {{catDetail.booking_price}}
       <image src="http://stc.unipet-group.com/mini/icon/petDetail/go.png" />
     </view>
   </view>
@@ -151,7 +155,7 @@
   <view class="pay-modal" wx:if="{{visible}}">
     <view class="pay-dingjin">
       <image src="http://stc.unipet-group.com/mini/icon/petDetail/close.png" bindtap="closeModal" />
-      <view class="title">定金：￥1,000</view>
+      <view class="title">定金：￥ {{catDetail.booking_price}}</view>
       <input type="number" placeholder="请输入手机号"
         value="{{}}" bindinput="inputPhone" />
       <view class="pay-btn {{disableInput ? 'disable' : ''}}" bindtap="submit">确认支付</view>

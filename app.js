@@ -3,7 +3,7 @@
 * @author: huguantao
 * @Date: 2020-05-08 23:10:19
 * @LastEditors: huguantao
-* @LastEditTime: 2020-05-24 17:29:30
+* @LastEditTime: 2020-05-29 00:12:27
  */
 //app.js
 App({
@@ -17,6 +17,12 @@ App({
     wx.login({
       success: res => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
+        try {
+          wx.setStorage({
+            key: "userCode",
+            data: res.code
+          })
+        } catch (e) { console.log(e)}
       }
     })
     // 获取用户信息
@@ -28,6 +34,12 @@ App({
             success: res => {
               // 可以将 res 发送给后台解码出 unionId
               this.globalData.userInfo = res.userInfo
+              try {
+                wx.setStorage({
+                  key: "userInfo",
+                  data: JSON.stringify(res.userInfo)
+                })
+              } catch (e) { console.log(e)}
 
               // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
               // 所以此处加入 callback 以防止这种情况

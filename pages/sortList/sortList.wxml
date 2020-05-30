@@ -19,12 +19,12 @@
         <view class="card-content">
           <view class="card-content-title">{{item.title}}</view>
           <view class="card-content-desc">
-            <text wx:for="{{item.tags}}" wx:for-item="tag" wx:key="tag">{{tag}} / </text>
+            <text wx:for="{{item.tags}}" wx:for-item="tag" wx:key="tag" wx:for-index="idx">{{tag}} {{idx < item.tags.length-1 ? '/' : ''}} </text>
           </view>
           <view class="card-content-price">
             <view class="card-content-price-content">
-              <text class="money">￥{{item.price}}</text>
-              <text class="discount">￥{{item.discount_price}}</text>
+              <text class="money">￥{{item.discount_price}}</text>
+              <text class="discount">￥{{item.price}}</text>
             </view>
             <image src="http://stc.unipet-group.com/mini/icon/sortList/buy.png" />
           </view>

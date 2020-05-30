@@ -1,3 +1,10 @@
+/**
+* @file: description
+* @author: huguantao
+* @Date: 2020-05-24 12:16:16
+* @LastEditors: huguantao
+* @LastEditTime: 2020-05-27 22:03:08
+ */
 Component({
   data: {
     // 滑动方向是否为纵向
@@ -23,6 +30,10 @@ Component({
   methods: {
     bindonChange(e){
       this.setData({ hot: e.detail.current })
-    }
+    },
+    gotoBuy: function(event) {
+      var id = event.currentTarget.dataset.id;
+      wx.navigateTo({url: `/pages/petDetail/petDetail?id=${id}`})
+    },
   },
 })

@@ -1,7 +1,9 @@
 <view class="global-header-place-holder" style='padding-top:{{navH}}px' wx:if="{{needHolder}}"></view>
 <view class="global-page-header {{border ? 'page-header-bordered' : ''}} {{needHolder ? 'global-page-header-holdered' : ''}}" style='padding-top:{{navH}}px'>
   <view class="global-page-header-head">
-    <image wx:if="{{goBackIcon}}" bindtap="goBack" src="http://stc.unipet-group.com/mini/icon/other/back.png" />
+    <view class="icon-wrap" bindtap="goBack">
+      <image wx:if="{{goBackIcon}}" src="http://stc.unipet-group.com/mini/icon/other/back.png" />
+    </view>
     <text>{{text}}</text>
   </view>
 </view>

@@ -13,7 +13,7 @@
       next-margin="{{nextMargin}}px">
     <block wx:for="{{images}}" wx:key="index">
       <swiper-item>
-        <image src="{{item}}" mode="aspectFill" class="swiper-item-images"/>
+        <image src="{{item.url}}" mode="aspectFill" class="swiper-item-images" data-id="{{item.target_url}}" bindtap="gotoBuy"/>
       </swiper-item>
     </block>
   </swiper>

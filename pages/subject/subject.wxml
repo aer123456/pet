@@ -1,14 +1,14 @@
 <!-- pages/subject/subject.wxml -->
-<header goBackIcon="{{true}}" text="新生萌物" border="{{true}}" needHolder="{{true}}" />
+<header goBackIcon="{{true}}" text="{{pageTitle}}" border="{{true}}" needHolder="{{true}}" />
 <view class="subject-page">
   <block wx:for="{{perferList}}" wx:key="index">
     <view class="perfer-item">
-      <image class="perfer-image" src="{{item.image}}" lazy-load="{{true}}"></image>
+      <image class="perfer-image" src="{{item.url}}" lazy-load="{{true}}"></image>
       <view class="perfer-info">
         <view>{{item.name}}</view>
         <view class="price">
           <text>¥ {{item.price}}</text>
-          <navigator class="perfer-action" url="{{item.link}}">购买</navigator>
+          <navigator class="perfer-action" url="/pages/petDetail/petDetail?id={{item.target}}">购买</navigator>
         </view>
       </view>
     </view>

@@ -6,7 +6,7 @@
 .my-page .head .head-img {
   width: 158rpx;
   height: 158rpx;
-  border-radius: 58rpx;
+  border-radius: 158rpx;
 }
 .my-page .head .head-text {
   font-size: 40rpx;

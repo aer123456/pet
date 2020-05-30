@@ -2,41 +2,47 @@
 <view class="my-page">
   <header goBackIcon="{{true}}" />
   <view class="head">
-    <image class="head-img" src='http://stc.unipet-group.com/mini/my/head.png' />
+    <image class="head-img" wx:if="{{!logined}}" src='http://stc.unipet-group.com/mini/my/head.png' />
+    <image class="head-img" wx:if="{{logined}}" src="{{userInfo.avatarUrl}}" />
     <view class="head-text">
-      <view>未登录<image src='http://stc.unipet-group.com/mini/my/sex1.png' /></view>
+      <view wx:if="{{!logined}}">未登录<image src='http://stc.unipet-group.com/mini/my/sex1.png' /></view>
+      <view wx:if="{{logined}}">{{userInfo.nickName}}
+        <image src="{{userInfo.gender == 1 ? 'http://stc.unipet-group.com/mini/my/sex2.png' : 'http://stc.unipet-group.com/mini/my/sex1.png'}}" />
+      </view>
       <!-- <view class="num">189 **** 9873</view> -->
-      <button>微信登录</button>
+      <button bindtap="getUserInfo" wx:if="{{!logined}}">微信登录</button>
     </view>
   </view>
 
   <view class="order-wrap">
     <view class="order-title">我的预定</view>
-    <!-- <view class="no-login empty">
+    <view class="no-login empty" wx:if="{{!logined}}">
       <image src="http://stc.unipet-group.com/mini/my/noLogin.png" />
       <view class="empty-text">登录后显示</view>
-    </view> -->
-    <!-- <view class="no-order empty">
+    </view>
+    <view class="no-order empty" wx:if="{{userOrders.length == 0}}">
       <image src="http://stc.unipet-group.com/mini/my/noOrder.png" />
       <text class="empty-text">暂无预定</text>
-    </view> -->
-    <view class="orders">
-      <view class="order box-shadow">
-        <view class="img">
-          <image src="http://stc.unipet-group.com/mini/my/cat.png" />
-        </view>
-        <view class="desc">
-          <view class="names">
-            <text class="name">小豆包</text>
-            <text>已预订</text>
+    </view>
+    <view class="orders" wx:else>
+      <block wx:for="{{userOrders}}" wx:key="index">
+        <view class="order box-shadow" bindtap="gotoDetail" data-id="{{item.id}}">
+          <view class="img">
+            <image src="{{item.cover}}" />
           </view>
-          <view class="status">男宝/已打疫苗/蓝色眼睛/活泼/已绝育/纯种</view>
-          <view class="prices">
-            <text>总价：￥2,800</text>
-            <text class="orange">定金：￥800</text>
+          <view class="desc">
+            <view class="names">
+              <text class="name">{{item.title}}</text>
+              <text>{{item.status_desc}}</text>
+            </view>
+            <view class="status">{{item.tags}}</view>
+            <view class="prices">
+              <text>总价：￥{{item.total_price}}</text>
+              <text class="orange">定金：￥{{item.booking_price}}</text>
+            </view>
           </view>
         </view>
-      </view>
+      </block>
     </view>
   </view>
 

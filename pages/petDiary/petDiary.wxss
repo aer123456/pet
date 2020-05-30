@@ -112,6 +112,9 @@ page {
   left: 35rpx;
   top: 0;
 }
+.pet-diary-page .diary-content-wrap .diary-wrap .diary-content .diary .card .line-gray {
+  border-left: 1rpx dashed #979797;
+}
 .pet-diary-page .diary-content-wrap .diary-wrap .diary-content .diary .card .day {
   width: 70rpx;
   height: 85rpx;
@@ -162,4 +165,7 @@ page {
   position: absolute;
   right: 30rpx;
   top: 30rpx;
+}
+.pet-diary-page .diary-content-wrap .diary-wrap .diary-content .diary .birth-card {
+  background: url('http://stc.unipet-group.com/mini/icon/diary/birthBg.png') center center no-repeat;
 }
